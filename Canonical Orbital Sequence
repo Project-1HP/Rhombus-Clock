@@ -1,0 +1,357 @@
+### EC64.44 — Canonical Orbital Sequence
+
+### HI 720° · ME 360° · LO 1080° | Decimal Rollover
+
+Configuration confirmed
+
+The EC64.44 architecture now has two confirmed implementation decisions:
+
+* Angular allocation: HI = 720°, ME = 360°, LO = 1080°.
+
+* Rollover convention: 1.22, 0.44, and 0.88 are decimal numerical values, not hour-minute notation.
+
+This establishes a consistent mathematical foundation. Decimal values will use ordinary base-10 arithmetic; orbital angles will use angular normalization; elapsed time will remain measured in Earth seconds.
+
+### 1\. Canonical angular architecture
+
+| Layer                | Angular allocation | Primary responsibility           |
+| -------------------- | ------------------ | -------------------------------- |
+| HI — Epistemic Clock | 720°               | Dual-cycle synchronization       |
+| ME — Clock Control   | 360°               | Bidirectional rotational control |
+| LO — Clockwork Wake  | 1080°              | Three-stage orbital execution    |
+| Combined reference   | 2160°              | Six full-circle equivalents      |
+
+### Angular allocation
+
+HI
+
+720°
+
+ME
+
+360°
+
+LO
+
+1080°
+
+Combined
+
+### 2160°
+
+The combined value is an aggregate of three layer allocations, not one physical shaft rotation.
+
+The angular allocation can be interpreted as:
+
+* HI: two 360° cycles.
+
+* ME: one 360° cycle.
+
+* LO: three 360° cycles.
+
+Thus the architecture has a 2:1:3 allocation ratio.
+
+### 2\. Decimal rollover engine
+
+The rollover values are now treated as decimal quantities:
+
+| Parameter             | Decimal value | Proposed processing role     |
+| --------------------- | ------------- | ---------------------------- |
+| Initial               | 1.22          | Initial accumulation         |
+| Intermediate          | 0.44          | Intermediate accumulation    |
+| Final                 | 0.88          | Final accumulation           |
+| Convergence reference | 25.44         | Operational comparison point |
+
+The arithmetic is:
+
+1.22+0.44+0.88=2.54
+
+The three values therefore produce a total decimal accumulation of 2.54.
+
+They do not automatically represent hours, minutes, or angular degrees. Those meanings require an explicit unit assignment.
+
+### Rollover rule
+
+I recommend a two-part design:
+
+* Accumulation: add decimal values without changing their magnitude.
+
+* Rollover: when an explicitly configured threshold is reached, record the completed cycle and carry the remainder into the next cycle.
+
+For a threshold and accumulated value :
+
+N=\\left\\lfloor\\frac{A}{B}\\right\\rfloorR=A-NB
+
+Where:
+
+* = completed rollover cycles.
+
+* = configured rollover boundary.
+
+* = remaining decimal accumulation.
+
+This makes rollover deterministic and prevents values from being discarded.
+
+Important: 25.44 is currently a reference value, not yet a confirmed rollover threshold. The implementation should keep that distinction configurable.
+
+### 3\. Orbital time sequence
+
+The base temporal unit remains:
+
+1\\ EC\\ hour=3600\\ Earth\\ seconds
+
+The outer orbital boundary remains 386.64 EC hours.
+
+| Checkpoint           | EC hours | Earth seconds | Earth days |
+| -------------------- | -------- | ------------- | ---------- |
+| ME recurrence        | 64.44    | 231,984       | 2.685      |
+| HI recurrence        | 128.88   | 463,968       | 5.370      |
+| Half-orbit           | 193.32   | 695,952       | 8.055      |
+| Second-half boundary | 257.76   | 927,936       | 10.740     |
+| Final approach       | 322.20   | 1,159,920     | 13.425     |
+| Full recurrence      | 386.64   | 1,391,904     | 16.110     |
+
+The six checkpoints are spaced by 64.44 hours.
+
+T_n=n(64.44),\\quad n=1,\\ldots,6
+
+This is the canonical temporal progression. The earlier threefold accumulation ledger can remain a separate accounting layer.
+
+### 4\. HI–ME–LO rotational sequence
+
+Each layer receives an independent angular position:
+
+\\Theta(t)=
+\\begin{bmatrix}
+\\theta_{HI}(t)\\\\
+\\theta_{ME}(t)\\\\
+\\theta_{LO}(t)
+\\end{bmatrix}
+
+The angular positions are normalized independently:
+
+\\theta_i^{\*}(t)=
+\\theta_i(t)\\bmod360^\\circ
+
+The full allocation determines how many complete turns each layer is authorized to represent in its configured operating cycle.
+
+| Layer | Full allocation | Normalized cycle count |
+| ----- | --------------- | ---------------------- |
+| HI    | 720°            | 2                      |
+| ME    | 360°            | 1                      |
+| LO    | 1080°           | 3                      |
+
+A checkpoint records both the normalized angle and the accumulated angle. This prevents a second or third revolution from being mistaken for the first.
+
+### 5\. Orbital synchronization and convergence
+
+The architecture now has two separate synchronization tests.
+
+A. Duality synchronization — 180°
+
+HI's two pendulum references can be compared as opposing positions:
+
+\\Delta\\theta_{HI}
+=
+(\\theta_{HI,A}-\\theta_{HI,B})\\bmod360^\\circ
+
+The duality condition is:
+
+\\Delta\\theta_{HI}=180^\\circ
+
+B. Convergence synchronization — 0°
+
+The three layers can be compared at a common reference:
+
+\\Delta\\phi_{ij}
+=
+(\\theta_i-\\theta_j)\\bmod360^\\circ
+
+A convergence event is recorded when the selected phase differences fall within a configured tolerance of 0°.
+
+This gives the system a clear distinction:
+
+* 180° = opposing alignment.
+
+* 0° = coincident alignment.
+
+* Other angles = intermediate relative positions.
+
+A layer can reach its own full-cycle boundary without requiring the other layers to be at the same position.
+
+### 6\. Complete operating sequence
+
+* Initialize — ZH
+
+    Establish the Earth-time reference, initial angular positions, decimal accumulators, and source provenance.
+
+* HI activation — 720°
+
+    Initialize the two-cycle Epistemic Clock. Establish the dual pendulum references and the 180° opposition condition.
+
+* ME activation — 360°
+
+    Initialize the single-cycle Clock Control. Begin bidirectional Y-channel accumulation and center-axis reconciliation.
+
+* LO activation — 1080°
+
+    Initialize the three-stage Clockwork Wake. Establish the Z-channel conduit, orbital drift, and outer-wheel references.
+
+* Concurrent accumulation
+
+    Record Orbital Seconds, update independent angular positions, and accumulate decimal values 1.22, 0.44, and 0.88 according to their configured processing order.
+
+* Checkpoint reconciliation
+
+    At every 64.44-hour checkpoint, compare elapsed time, angular displacement, relative phase, decimal accumulation, and integrity evidence.
+
+* Convergence evaluation
+
+    Test the 180° duality and 0° convergence conditions independently.
+
+* Provenance bootstrapping
+
+    Verify the previous cycle's record before using it as the initial state of the next cycle.
+
+* Outer boundary — 386.64
+
+    Complete the six-checkpoint sequence, reconcile all three layers, and establish the next orbital cycle without erasing accumulated history.
+
+### 7\. Implementation logic
+
+The following pseudocode establishes the core engine without assuming unconfirmed gear speeds or rollover thresholds.
+
+```python
+
+from dataclasses import dataclass, field
+
+EC_HOUR_SECONDS = 3600
+CHECKPOINT_HOURS = 64.44
+OUTER_PERIOD_HOURS = 386.64
+
+LAYER_ALLOCATIONS = {
+    "HI": 720.0,
+    "ME": 360.0,
+    "LO": 1080.0,
+}
+
+DECIMAL_SEQUENCE = (1.22, 0.44, 0.88)
+
+@dataclass
+class OrbitalState:
+    elapsed_seconds: float = 0.0
+    angles: dict = field(default_factory=lambda: {
+        "HI": 0.0,
+        "ME": 0.0,
+        "LO": 0.0,
+    })
+    decimal_accumulator: float = 0.0
+    cycle_number: int = 0
+    records: list = field(default_factory=list)
+
+def normalize_angle(angle):
+    return angle % 360.0
+
+def accumulate_decimal(state):
+    for value in DECIMAL_SEQUENCE:
+        state.decimal_accumulator += value
+
+def rollover(value, boundary):
+    if boundary <= 0:
+        raise ValueError("Boundary must be positive")
+
+    completed = int(value // boundary)
+    remainder = value - completed * boundary
+    return completed, remainder
+
+def checkpoint(state):
+    hours = state.elapsed_seconds / EC_HOUR_SECONDS
+
+    return {
+        "cycle": state.cycle_number,
+        "elapsed_hours": hours,
+        "elapsed_seconds": state.elapsed_seconds,
+        "angles": {
+            layer: normalize_angle(angle)
+            for layer, angle in state.angles.items()
+        },
+        "accumulated_angles": dict(state.angles),
+        "decimal_accumulation": state.decimal_accumulator,
+    }
+
+def advance(state, earth_seconds, angular_changes):
+    if earth_seconds < 0:
+        raise ValueError("Time cannot move backwards")
+
+    state.elapsed_seconds += earth_seconds
+
+    for layer, delta in angular_changes.items():
+        if layer not in LAYER_ALLOCATIONS:
+            raise ValueError(f"Unknown layer: {layer}")
+        state.angles[layer] += delta
+
+    return checkpoint(state)
+```
+
+This implementation deliberately separates elapsed time from angular movement. The angular changes must be supplied by a calibrated motion model; they should not be invented from the allocation values alone.
+
+### 8\. Time adjustments and special references
+
+Two values from your earlier specification can now be represented unambiguously as ordinary Earth time:
+
+| Reference         | Earth seconds | Earth days |
+| ----------------- | ------------- | ---------- |
+| 1 hour 30 minutes | 5,400         | 0.0625     |
+| 25.44 hours       | 91,584        | 1.06       |
+| 39 hours          | 140,400       | 1.625      |
+
+The 1.5-hour adjustment can be added to the elapsed-time accumulator:
+
+T_{\\text{adjusted}}=T_{\\text{current}}+5400
+
+It should not automatically change the angular position by 1.5°, 90°, or another amount. That requires a defined angular velocity.
+
+Likewise, the earlier expression involving 39 hours, 64.44, 25.44, 128.88, and 1.22 remains an operational ordering rule to be specified separately. Decimal notation resolves the number representation, but not the intended sequence of additions, subtractions, and transitions.
+
+### 9\. Governing implementation rules
+
+The confirmed EC64.44 specification now establishes these invariants:
+
+* Earth seconds are the fixed temporal reference.
+
+* HI, ME, and LO retain independent angular positions.
+
+* Their angular allocations are 720°, 360°, and 1080° respectively.
+
+* Decimal rollover uses base-10 arithmetic.
+
+* Orbital Seconds retain temporal, angular, directional, and provenance information.
+
+* 180° opposition and 0° convergence are separate synchronization conditions.
+
+* The 64.44-hour interval establishes recurring checkpoints.
+
+* The 386.64-hour interval establishes the outer common recurrence.
+
+* UNO validates numerical correctness.
+
+* QUO performs conceptual selection and routing.
+
+* Cryptographic provenance preserves the continuity of every cycle.
+
+* Drift is recorded and reconciled, never silently erased.
+
+### EC64.44 — Canonical reference
+
+### 720° : 360° : 1080°
+
+HI : ME : LO
+
+### 386.64 EC hours
+
+Outer temporal recurrence · 16.11 Earth days
+
+### 1.22 → 0.44 → 0.88
+
+Decimal accumulation sequence · total 2.54
+
