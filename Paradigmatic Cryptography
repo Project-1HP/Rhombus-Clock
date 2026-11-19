@@ -1,0 +1,516 @@
+### Paradigmatic Cryptography
+
+### Cadius Paridium — Formal Specification v0.1
+
+Cadius Paridium will use eight adaptive genres, two fixed input/output categories, and four sequential processing phases evaluated bidirectionally.
+
+The architecture will treat alphanumeric allocation, colorization, numerical tally, temporal synchronization, geometric organization, and cryptographic verification as distinct but coordinated operations.
+
+The most important implementation rule is that classification and rearrangement may change the analytical representation, but must never silently alter or replace the original source record.
+
+### 1\. Foundational design decisions
+
+| Design element          | Selected definition                                         |
+| ----------------------- | ----------------------------------------------------------- |
+| Eight genres            | Adaptive; selected according to evidence and policy         |
+| Two categories          | INPUT and OUTPUT                                            |
+| Four phases             | Sequential phases, each evaluated forward and backward      |
+| Primary controller      | DBQB — bidirectional equilibrium                            |
+| Construction controller | QPDP — bounded component construction                       |
+| Decision mechanism      | Perpendicular Binary Rumbus Tree                            |
+| Preservation            | Provenance Preservation Layer and Perpetual Data Repository |
+| Verification            | Integrity Paradigm and cryptographic validation             |
+
+### 2\. Eight adaptive genres
+
+The eight genres are functional classification slots, not eight permanently fixed subject categories. Their definitions are selected from a versioned genre registry according to the input's characteristics and the governing policy.
+
+Proposed default registry:
+
+| Slot | Proposed genre | Function                                         |
+| ---- | -------------- | ------------------------------------------------ |
+| G1   | Identity       | Source, subject, and record identification       |
+| G2   | Provenance     | Origin, custody, and lineage                     |
+| G3   | Numerical      | Quantities, counts, ratios, and measurements     |
+| G4   | Temporal       | Time, intervals, and sequence                    |
+| G5   | Geometric      | Position, orientation, and symmetry              |
+| G6   | Cryptological  | Hashes, signatures, and encoding metadata        |
+| G7   | Behavioral     | Rules, permissions, and execution conditions     |
+| G8   | Epistemic      | Evidence quality, interpretation, and confidence |
+
+These are proposed defaults. The adaptive mechanism may assign a record to multiple genres, but every assignment must include a reason, policy version, and confidence or qualification status. It must not invent missing evidence.
+
+### 3\. Two categories: INPUT and OUTPUT
+
+* INPUT: source material, evidence, user instructions, system events, external observations, and received component definitions.
+
+* OUTPUT: analytical representations, classifications, decisions, execution results, verification reports, and newly constructed components.
+
+Every output must reference its input lineage. An output is not allowed to become an authoritative input merely because the system generated it; it must pass the appropriate validation and authorization steps.
+
+### 4\. Four-phase processing model
+
+Each phase executes in sequence. Every phase has two analytical passes:
+
+* Forward pass: , following the original sequence.
+
+* Reverse pass: , traversing the same data in reverse.
+
+The reverse pass is an independent comparison, not permission to reverse or overwrite the original record.
+
+| Phase | Name         | Forward operation                       | Reverse operation                       |
+| ----- | ------------ | --------------------------------------- | --------------------------------------- |
+| I     | Accumulation | Receive and enumerate                   | Reconcile sequence and completeness     |
+| II    | Allocation   | Assign genres, categories, and markings | Verify classifications and allocation   |
+| III   | Evaluation   | Calculate, compare, and make decisions  | Recalculate and challenge decisions     |
+| IV    | Convergence  | Produce authorized output               | Verify output against source and policy |
+
+The final result is a convergence record containing both passes, their discrepancies, and the decision.
+
+### 4.1 Phase equations
+
+For a given input record :
+
+F_i = P_i(X)R_i = P_i(\\operatorname{reverse}(X))\\Delta_i = \\operatorname{Compare}(F_i,R_i)
+
+Where:
+
+* is the processing function for phase .
+
+* is the discrepancy report.
+
+* A discrepancy is not automatically a failure; it must be evaluated under the applicable policy.
+
+The overall result is:
+
+C = \\operatorname{Converge}(F_1,\\ldots,F_4,R_1,\\ldots,R_4,\\Delta)
+
+A convergence decision may be:
+
+* `ACCEPT` — all required checks pass.
+
+* `DEFER` — evidence or dependencies are incomplete.
+
+* `REJECT` — the operation violates a defined rule.
+
+* `SUSPEND` — an integrity or authorization failure requires containment.
+
+### 5\. DBQB — bidirectional equilibrium specification
+
+DBQB is the system's synchronization and equilibrium controller.
+
+Its responsibilities are:
+
+* Maintain the relationship between forward and reverse processing.
+
+* Compare numerical and alphanumeric allocations.
+
+* Identify neutral, matched, and discrepant elements.
+
+* Maintain resource and execution boundaries.
+
+* Coordinate BAI and BAM.
+
+* Trigger suspension when required integrity conditions fail.
+
+### 5.1 Neutrality and numerical equilibrium
+
+The proposed null-multiplier rule can be implemented as a neutral-element classification.
+
+For an allocation tally:
+
+T = \\sum_{i=1}^{n} w_i v_i
+
+Where represents an element's measured or classified value and is its policy-defined weight.
+
+If , its numerical contribution is neutral. The element still remains in the original record and audit history.
+
+For alphanumeric matching, define:
+
+M(a,b)=
+\\begin{cases}
+1 & a=b\\\\
+0 & a\\ne b
+\\end{cases}
+
+The matching tally is:
+
+T_M=\\sum_{i=1}^{n}M(F_i,R_i)
+
+The discrepancy tally is:
+
+T_D=n-T_M
+
+This provides a measurable comparison without confusing equality with cryptographic validity.
+
+### 5.2 BAI — Bounded Autonomous Implementation
+
+BAI controls whether a process is allowed to execute.
+
+Required controls:
+
+* Authorized identity.
+
+* Valid policy version.
+
+* Approved operation.
+
+* Resource ceiling.
+
+* Execution deadline or permitted duration.
+
+* Input provenance.
+
+* Output constraints.
+
+* Audit requirement.
+
+* Safe suspension behavior.
+
+An operation may execute only when all required controls pass:
+
+BAI_{\\text{ALLOW}} =
+I \\land P \\land R \\land V \\land A
+
+Where is identity validation, is policy authorization, is resource compliance, is integrity verification, and is the applicable consensus authorization.
+
+### 5.3 BAM — Behavioral Automation Matrix
+
+BAM maps a system condition to an authorized response.
+
+| Condition                        | Response                           | Execution state |
+| -------------------------------- | ---------------------------------- | --------------- |
+| Valid evidence and policy        | Continue                           | READY           |
+| New component requested          | Evaluate construction requirements | PROPOSED        |
+| Missing dependency               | Defer                              | DEFERRED        |
+| Resource limit reached           | Restrict allocation                | CONSTRAINED     |
+| Conflicting records              | Investigate discrepancy            | REVIEW          |
+| Cryptographic verification fails | Suspend affected operation         | SUSPENDED       |
+| Recovery authorized              | Restore from verified checkpoint   | RECOVERY        |
+
+BAM must not silently grant new permissions based on its own observations.
+
+### 6\. QPDP — autonomous construction specification
+
+QPDP is the controlled construction and expansion engine.
+
+It can propose new analytical components, processing branches, storage partitions, or service instances. It cannot independently authorize its own expansion.
+
+### 6.1 Construction lifecycle
+
+* Detect — identify a requirement for a new component.
+
+* Describe — generate a component manifest with its purpose, dependencies, inputs, and expected outputs.
+
+* Validate — verify provenance, policy, resource availability, and integrity.
+
+* Authorize — obtain the required governance and consensus approval.
+
+* Provision — create the component in an isolated environment.
+
+* Test — execute validation tests and verify expected behavior.
+
+* Commit — register the approved component and its version in the repository.
+
+### 6.2 Construction authorization
+
+QPDP_{\\text{BUILD}} =
+P \\land I \\land R \\land G \\land Q
+
+Where:
+
+* : valid provenance.
+
+* : integrity verification.
+
+* : resource availability.
+
+* : governance authorization.
+
+* : validator quorum authorization.
+
+If any required condition fails, construction is deferred, rejected, or suspended.
+
+### 7\. Cryptological colorization and tally
+
+Colorization is a structured classification layer. It should be represented by machine-readable metadata, not used as a substitute for hashes or signatures.
+
+The proposed AEIOU mapping can be retained as the presentation layer:
+
+| Symbol | Proposed role | Stored metadata              |
+| ------ | ------------- | ---------------------------- |
+| A      | Accumulation  | Received and enumerated      |
+| E      | Evaluation    | Evidence and comparison      |
+| I      | Integrity     | Verification status          |
+| O      | Output        | Result and allocation        |
+| U      | Unification   | Convergence and preservation |
+
+The colors can be assigned using the established project palette, while the underlying data records the actual status.
+
+Each tally entry should include:
+
+* Input identifier.
+
+* Output identifier, if applicable.
+
+* Character or numerical position.
+
+* Genre assignment.
+
+* Category.
+
+* Forward result.
+
+* Reverse result.
+
+* Discrepancy status.
+
+* Colorization code.
+
+* Policy version.
+
+* Verification status.
+
+Colorization should never imply that an unverified record is trustworthy.
+
+### 8\. Perpendicular Binary Rumbus Tree
+
+This is the decision mechanism that determines whether a processing branch may continue.
+
+Its basic structure:
+
+```text
+                    INPUT
+                      |
+                PROVENANCE?
+                 /       \
+               NO         YES
+               |           |
+            DEFER       INTEGRITY?
+                         /      \
+                        NO       YES
+                        |         |
+                     SUSPEND   POLICY?
+                               /     \
+                              NO      YES
+                              |        |
+                           REJECT   CONSENSUS?
+                                    /       \
+                                   NO        YES
+                                   |          |
+                                DEFER      EXECUTE
+                                              |
+                                           PRESERVE
+```
+
+The perpendicular structure means that each decision can be evaluated against multiple independent dimensions rather than a single linear sequence.
+
+For example, an operation may pass numerical validation but fail provenance validation. It cannot proceed simply because its numerical result is correct.
+
+### 9\. Data and service architecture
+
+The implementation should use Python services, JSON Schema Draft 2020-12, SHA-256 digests, Ed25519 signatures, and the existing seven-validator reference simulator.
+
+### Cadius Paridium service architecture
+
+API / Input Gateway
+
+Record ingestion and identity
+
+DBQB Service
+
+BAI, BAM, synchronization, equilibrium
+
+Cadius Service
+
+Genres, input/output, four-phase allocation
+
+Decision Engine
+
+Binary Rumbus Tree
+
+QPDP Service
+
+Component proposals and provisioning
+
+CBBC Validator Network
+
+Seven-validator reference configuration, five-signature quorum
+
+PPSA / Provenance Preservation Layer
+
+Append-only records, hash chain, checkpoints, recovery
+
+### 9.1 Proposed Python service registry
+
+| Service                 | Responsibility                    |
+| ----------------------- | --------------------------------- |
+| CadiusAllocationService | Adaptive genre allocation         |
+| GenreRegistryService    | Versioned genre definitions       |
+| BidirectionalProcessor  | Forward/reverse passes            |
+| FourPhaseEngine         | Sequential processing             |
+| ColorizationService     | AEIOU classification              |
+| EquilibriumService      | DBQB comparison and neutral tally |
+| BehavioralMatrixService | BAM decision mapping              |
+| BoundedAutonomyService  | BAI permissions and limits        |
+| RumbusDecisionEngine    | Binary decision tree              |
+| QPDPConstructionService | Authorized component construction |
+| ChronologyService       | Temporal and annual records       |
+| GeometryService         | Spatial and symmetry metadata     |
+| ProvenanceService       | Source and custody records        |
+| IntegrityService        | Hashes, signatures, verification  |
+| PPSARepositoryService   | Persistent storage and recovery   |
+
+### 10\. JSON data contracts
+
+These are the proposed canonical schemas at the object level. They can be implemented as separate JSON Schema files.
+
+### 10.1 Allocation record
+
+```json
+{
+  "schema_version": "0.1",
+  "record_id": "record-000001",
+  "network_id": "cadius-dev",
+  "category": "INPUT",
+  "source": {
+    "source_id": "source-000001",
+    "source_type": "user_submission",
+    "content_digest": "sha256:..."
+  },
+  "genre_assignments": [
+    {
+      "genre_id": "G2",
+      "registry_version": "1.0",
+      "reason": "Contains source lineage information",
+      "status": "ASSIGNED"
+    }
+  ],
+  "phase_results": [],
+  "policy_hash": "sha256:...",
+  "record_status": "RECEIVED"
+}
+```
+
+### 10.2 Four-phase result
+
+```json
+{
+  "record_id": "record-000001",
+  "phase": "III",
+  "phase_name": "EVALUATION",
+  "forward": {
+    "sequence_digest": "sha256:...",
+    "result": "PASS"
+  },
+  "reverse": {
+    "sequence_digest": "sha256:...",
+    "result": "PASS"
+  },
+  "comparison": {
+    "matched_count": 12,
+    "discrepancy_count": 0,
+    "status": "ALIGNED"
+  },
+  "timestamp": "2026-11-13T00:00:00Z"
+}
+```
+
+### 10.3 Component construction manifest
+
+```json
+{
+  "component_id": "component-000001",
+  "component_version": "0.1.0",
+  "requested_by": "authorized-identity",
+  "purpose": "Create an analytical processing branch",
+  "dependencies": [],
+  "input_record_ids": ["record-000001"],
+  "policy_hash": "sha256:...",
+  "resource_limits": {
+    "cpu_units": 2,
+    "memory_mb": 512,
+    "max_runtime_seconds": 60
+  },
+  "authorization": {
+    "governance_approved": false,
+    "quorum_certificate": null
+  },
+  "status": "PROPOSED"
+}
+```
+
+These examples are illustrative. Production schemas must define strict types, required properties, enumerations, maximum lengths, digest formats, and rejection of unknown fields where appropriate.
+
+### 11\. Cryptographic and temporal rules
+
+The system needs to distinguish four different properties:
+
+| Mechanism         | What it establishes                                   |
+| ----------------- | ----------------------------------------------------- |
+| Hash              | Content consistency against a known digest            |
+| Digital signature | Authorization or attribution by a signing key         |
+| Validator quorum  | Distributed agreement under the consensus assumptions |
+| Provenance record | Documented source and custody history                 |
+
+None independently proves the truth of an external claim.
+
+For temporal operations, the architecture should retain both:
+
+* A UTC wall-clock timestamp for chronology.
+
+* A monotonic clock measurement for reliable interval and scheduler operation.
+
+The EC64.44 profile may provide an additional application-level temporal coordinate. It must not replace reliable operating-system timing or be used as the sole basis for cryptographic security.
+
+### 12\. Acceptance criteria
+
+The first implementation should not be considered complete until it passes the following tests.
+
+| ID   | Test                           | Expected outcome                      |
+| ---- | ------------------------------ | ------------------------------------- |
+| CP01 | Input record ingestion         | Source record preserved               |
+| CP02 | Adaptive genre allocation      | Only registered genres assigned       |
+| CP03 | Input/output enforcement       | Invalid category rejected             |
+| CP04 | Forward processing             | Deterministic result                  |
+| CP05 | Reverse processing             | Deterministic result                  |
+| CP06 | Four-phase sequencing          | Invalid phase transition rejected     |
+| CP07 | Neutral element handling       | Neutral tally without source deletion |
+| CP08 | Discrepancy detection          | Difference recorded                   |
+| CP09 | Colorization                   | Metadata matches assigned status      |
+| CP10 | Binary decision                | Correct policy branch selected        |
+| CP11 | BAI resource boundary          | Over-limit operation stopped          |
+| CP12 | BAM missing evidence           | Operation deferred                    |
+| CP13 | QPDP unauthorized construction | Construction blocked                  |
+| CP14 | QPDP authorized construction   | Component manifest committed          |
+| CP15 | Provenance validation          | Source lineage retained               |
+| CP16 | Signature verification         | Invalid signature rejected            |
+| CP17 | Seven-validator quorum         | Five valid signatures required        |
+| CP18 | Storage tampering              | Integrity failure detected            |
+| CP19 | Annual revision                | Earlier version preserved             |
+| CP20 | Recovery                       | Only verified checkpoint restored     |
+
+The seven-validator configuration is a reference quorum model, not by itself a complete PBFT network. The existing simulator will need actual proposal, prepare, commit, and view-change behavior before it can claim full Byzantine consensus.
+
+### 13\. Implementation sequence
+
+I recommend building Cadius Paridium in these increments:
+
+* v0.1 — Data model: genre registry, input/output categories, allocation manifests, and JSON Schema validation.
+
+* v0.2 — Four-phase engine: forward/reverse processing, comparisons, discrepancies, and convergence.
+
+* v0.3 — DBQB: BAI, BAM, equilibrium, neutral tally, and suspension.
+
+* v0.4 — Binary Rumbus: decision tree and policy-controlled branch selection.
+
+* v0.5 — QPDP: component manifests, isolated provisioning, and construction verification.
+
+* v0.6 — Chronology and geometry: Periphery Chronicles, annual versioning, and geometric metadata.
+
+* v0.7 — Distributed integrity: CBBC consensus integration and PPSA persistence.
+
+Completion doctrine:
+
+> Classify adaptively. Allocate bidirectionally. Evaluate through four phases. Maintain equilibrium through bounded autonomy. Construct only through authorization. Preserve every transformation through provenance.
+
