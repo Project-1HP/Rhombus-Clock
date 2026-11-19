@@ -1,0 +1,1033 @@
+### CBBC Protocol v0.2
+
+### Conceptual Byzantine Behavioral Consensus
+
+Project: Xenograph Analytics Architecture: Epistemic Modernization Integrity Protocol classification: Hybrid Byzantine Fault Tolerant Behavioral Consensus Version: 0.2 Status: Proposed engineering specification
+
+### 1\. Protocol mandate
+
+CBBC v0.2 establishes a distributed protocol for converting articulated substrate values into enforceable technological behavior.
+
+The architecture combines:
+
+* Equal-weight Byzantine consensus voting.
+
+* Specialized validator responsibilities.
+
+* Dual authorization for behavioral policy changes.
+
+* Evidence-based execution authorization.
+
+* Cryptographic message authentication.
+
+* Quorum-certified state transitions.
+
+* Automatic suspension when integrity failures are detected.
+
+* Persistent audit and recovery mechanisms.
+
+### 1.1 Architectural decisions
+
+| Decision                      | Selected architecture             |
+| ----------------------------- | --------------------------------- |
+| Validator architecture        | Hybrid                            |
+| Voting authority              | Equal voting weight               |
+| Verification responsibilities | Specialized                       |
+| Behavioral policy authority   | Dual authorization                |
+| Integrity failure response    | Suspend                           |
+| Consensus foundation          | PBFT-style BFT                    |
+| Execution authority           | Quorum + behavioral authorization |
+| Record preservation           | Cryptographic persistence         |
+
+Foundational rule:
+
+A validator may independently contribute evidence, verification, and computational execution, but no individual validator can unilaterally authorize a system-wide state transition.
+
+The protocol separates three authorities:
+
+* Governance authority: Approves the rules.
+
+* Consensus authority: Establishes agreement.
+
+* Execution authority: Executes only an authorized operation.
+
+### 2\. Hybrid validator architecture
+
+The hybrid model combines equal voting rights with specialized verification responsibilities.
+
+Every active consensus validator has one vote, regardless of its computational resources, financial contribution, or specialized role.
+
+Specialization determines what a validator must verify, not how much voting power it possesses.
+
+### 2.1 Validator classifications
+
+| ID  | Role                 | Required responsibility                      |
+| --- | -------------------- | -------------------------------------------- |
+| GOV | Governance Validator | Policy authorization and version control     |
+| EVD | Evidence Validator   | Provenance and evidence integrity            |
+| BHV | Behavioral Validator | Policy compliance                            |
+| EXE | Execution Validator  | Resource availability and execution validity |
+| INT | Integrity Validator  | Hashes, signatures, and state consistency    |
+| ORC | Oracle Validator     | External information and source attestations |
+| AUD | Audit Validator      | Decision records and audit preservation      |
+
+These are logical capabilities. A validator can perform multiple capabilities, but critical checks must have independently administered verification paths.
+
+### 2.2 Voting structure
+
+### Equal-weight hybrid consensus
+
+### 1
+
+One validator
+
+One authenticated vote
+
+### 1
+
+One voting weight
+
+Independent of economic contribution
+
+Specialized verification gates
+
+* Evidence verification
+
+* Behavioral policy verification
+
+* Resource verification
+
+* Cryptographic integrity verification
+
+* Oracle attestation
+
+    Final authority
+
+BFT quorum certificate + successful mandatory verification gates.
+
+A specialized validator cannot override the BFT quorum. Conversely, a BFT quorum cannot override a mandatory failed behavioral or integrity check.
+
+### 2.3 Validator independence
+
+The implementation should distinguish:
+
+* Validator identity.
+
+* Validator operator.
+
+* Infrastructure provider.
+
+* Signing key.
+
+* Verification capabilities.
+
+* Voting eligibility.
+
+* Administrative control domain.
+
+This prevents an organization from appearing to operate multiple independent validators when all of them actually depend on the same administrator or infrastructure.
+
+### 3\. Behavioral policy authority — dual authorization
+
+Behavioral policies define the permitted operational boundaries of the network.
+
+A policy change must receive two distinct forms of authorization:
+
+AUTHORITY A — GOVERNANCE APPROVAL
+
+Authorized policy approval and cryptographic signature
+
+AUTHORITY B — DISTRIBUTED VALIDATOR CONSENSUS
+
+BFT quorum approval of the exact policy version and hash
+
+POLICY ACTIVATION
+
+Approved policy becomes effective at its designated epoch
+
+Neither authority is sufficient independently.
+
+### 3.1 Policy lifecycle
+
+* Draft policy.
+
+* Validate policy syntax and permitted operations.
+
+* Obtain governance approval.
+
+* Generate canonical policy hash.
+
+* Distribute the proposed policy to validators.
+
+* Verify the governance signature.
+
+* Run the BFT consensus process.
+
+* Commit the policy activation record.
+
+* Activate the policy at the designated epoch.
+
+* Preserve the previous version for audit and recovery.
+
+### 3.2 Policy immutability during consensus
+
+Every consensus proposal must reference:
+
+* Policy identifier.
+
+* Policy version.
+
+* Policy hash.
+
+* Activation epoch.
+
+Validators must reject proposals referencing unknown, superseded, or unauthorized policy versions.
+
+No policy may be modified in place after activation. Changes create a new version.
+
+### 4\. Protocol message formats
+
+All consensus messages must use a canonical serialization format, authenticated signatures, and domain-separated cryptographic hashes.
+
+The following JSON structures define the proposed logical message schema. A production implementation should use a canonical encoding such as deterministic CBOR or JSON Canonicalization Scheme (JCS), rather than signing arbitrary JSON text.
+
+### 4.1 Common message envelope
+
+Every message uses a shared envelope.
+
+```json
+
+{
+  "protocol": "CBBC",
+  "version": "0.2",
+  "network_id": "XENOGRAPH-01",
+  "message_type": "PREPARE",
+  "message_id": "unique-message-id",
+  "sender": "VALIDATOR-001",
+  "epoch": 1,
+  "view": 0,
+  "sequence": 1001,
+  "timestamp": "2026-11-13T00:00:00Z",
+  "payload_hash": "sha256:...",
+  "signature": "digital-signature"
+}
+```
+
+Required fields:
+
+| Field        | Purpose                              |
+| ------------ | ------------------------------------ |
+| protocol     | Identifies CBBC                      |
+| version      | Protocol compatibility               |
+| network_id   | Prevents cross-network message reuse |
+| message_type | Identifies the operation             |
+| message_id   | Message identification               |
+| sender       | Authenticated validator identity     |
+| epoch        | Consensus configuration period       |
+| view         | Current leader/view number           |
+| sequence     | Ordered operation number             |
+| timestamp    | Diagnostic and audit metadata        |
+| payload_hash | Cryptographic payload commitment     |
+| signature    | Authenticated message origin         |
+
+The signature must cover the canonical message contents, including the payload hash and domain separation information. A timestamp alone must never determine message validity.
+
+### 4.2 Core message types
+
+01 — PROPOSE
+
+Leader initiated
+
+Submits a transaction or state transition for validation.
+
+```json
+
+{
+  "message_type": "PROPOSE",
+  "proposal_id": "P-1001",
+  "sequence": 1001,
+  "operation": "RESOURCE_ALLOCATION",
+  "policy_id": "EPISTEMIC-001",
+  "policy_version": 1,
+  "policy_hash": "sha256:...",
+  "evidence_root": "sha256:...",
+  "state_root_previous": "sha256:...",
+  "state_root_proposed": "sha256:..."
+}
+
+```
+
+02 — PREPARE
+
+Validator initiated
+
+Declares that the proposal passed local validation and is eligible for the prepare phase.
+
+```json
+
+{
+  "message_type": "PREPARE",
+  "proposal_id": "P-1001",
+  "sequence": 1001,
+  "proposal_digest": "sha256:...",
+  "policy_hash": "sha256:...",
+  "validation_result": "ACCEPT"
+}
+
+```
+
+03 — COMMIT
+
+Commit authorization
+
+Declares a validator's commitment to the prepared proposal.
+
+```json
+
+{
+  "message_type": "COMMIT",
+  "proposal_id": "P-1001",
+  "sequence": 1001,
+  "proposal_digest": "sha256:...",
+  "prepare_certificate_hash": "sha256:...",
+  "validation_result": "ACCEPT"
+}
+
+```
+
+04 — POLICY_APPROVAL
+
+Dual authority
+
+Contains governance approval for a policy change.
+
+```json
+
+{
+  "message_type": "POLICY_APPROVAL",
+  "policy_id": "EPISTEMIC-001",
+  "previous_version": 1,
+  "new_version": 2,
+  "new_policy_hash": "sha256:...",
+  "governance_authority": "GOV-001",
+  "approval_signature": "signature",
+  "activation_epoch": 5
+}
+
+```
+
+05 — SUSPEND
+
+Safety control
+
+Signals an integrity failure and requests the network's safety-hold procedure.
+
+```json
+
+{
+  "message_type": "SUSPEND",
+  "incident_id": "INC-001",
+  "affected_component": "ORACLE",
+  "affected_sequence": 1001,
+  "failure_code": "INTEGRITY_MISMATCH",
+  "evidence_hash": "sha256:...",
+  "requested_action": "HALT_AFFECTED_EXECUTION"
+}
+
+```
+
+06 — VIEW_CHANGE
+
+Transfers consensus leadership following timeout or leader failure.
+
+```json
+
+{
+  "message_type": "VIEW_CHANGE",
+  "new_view": 1,
+  "last_committed_sequence": 1000,
+  "prepared_certificates": [],
+  "sender": "VALIDATOR-002"
+}
+
+```
+
+07 — CHECKPOINT
+
+Establishes a verifiable state snapshot.
+
+```json
+
+{
+  "message_type": "CHECKPOINT",
+  "sequence": 1000,
+  "state_root": "sha256:...",
+  "policy_hash": "sha256:...",
+  "validator_configuration_hash": "sha256:...",
+  "snapshot_hash": "sha256:..."
+}
+
+```
+
+### 4.3 Additional required messages
+
+The production protocol should also define:
+
+| Message              | Function                                                     |
+| -------------------- | ------------------------------------------------------------ |
+| VALIDATION_RESULT    | Reports ACCEPT, REJECT, DEFER, or SUSPEND.                   |
+| PREPARE_CERTIFICATE  | Carries authenticated prepare evidence.                      |
+| COMMIT_CERTIFICATE   | Carries authenticated commit evidence.                       |
+| NEW_VIEW             | Establishes the replacement leader's valid proposal context. |
+| RESUME_REQUEST       | Requests recovery after suspension.                          |
+| RESUME_CERTIFICATE   | Establishes authorized recovery.                             |
+| EVIDENCE_ATTESTATION | Identifies evidence source, method, and integrity.           |
+| RESOURCE_ATTESTATION | Confirms computational resource commitments.                 |
+
+Certificates must carry enough authenticated evidence for another node to independently verify them. A certificate hash alone is not a substitute for the underlying signatures or an accessible authenticated certificate record.
+
+### 5\. CBBC state machine
+
+The protocol should operate through an explicit state machine rather than allowing independent subsystems to make implicit execution decisions.
+
+### 5.1 Primary states
+
+| State      | Meaning                       | Permitted activity                      |
+| ---------- | ----------------------------- | --------------------------------------- |
+| BOOTSTRAP  | Network initialization        | Identity and configuration verification |
+| READY      | Operational                   | Receive proposals                       |
+| PROPOSED   | Proposal received             | Evidence and policy evaluation          |
+| VALIDATING | Local checks underway         | Independent validation                  |
+| PREPARED   | Prepare quorum achieved       | Await commit                            |
+| COMMITTED  | Commit quorum achieved        | Record committed state                  |
+| EXECUTING  | Authorized execution underway | Perform bounded operation               |
+| PERSISTING | State preservation underway   | Replication and audit                   |
+| SUSPENDED  | Integrity failure             | No affected execution                   |
+| RECOVERY   | Recovery validation           | Verify restoration conditions           |
+
+### 5.2 State transition diagram
+
+```mermaid
+
+stateDiagram-v2
+    [*] --> BOOTSTRAP
+    BOOTSTRAP --> READY: Initialization verified
+    BOOTSTRAP --> SUSPENDED: Integrity failure
+
+    READY --> PROPOSED: Receive proposal
+    PROPOSED --> VALIDATING: Validate evidence
+    VALIDATING --> PREPARED: Checks pass and prepare quorum
+    VALIDATING --> SUSPENDED: Integrity failure
+    VALIDATING --> READY: Rejected proposal
+
+    PREPARED --> COMMITTED: Commit quorum
+    PREPARED --> SUSPENDED: Integrity failure
+
+    COMMITTED --> EXECUTING: Authorization verified
+    COMMITTED --> SUSPENDED: State integrity failure
+
+    EXECUTING --> PERSISTING: Operation completed
+    EXECUTING --> SUSPENDED: Execution integrity failure
+
+    PERSISTING --> READY: Persistence verified
+
+    SUSPENDED --> RECOVERY: Recovery initiated
+    RECOVERY --> READY: Recovery certificate accepted
+    RECOVERY --> SUSPENDED: Recovery unsuccessful
+```
+
+### 5.3 Suspension behavior
+
+Mandatory safety behavior
+
+When an integrity failure is detected:
+
+* Stop the affected execution.
+
+* Prevent new dependent operations.
+
+* Preserve the last verified committed state.
+
+* Record the incident and supporting evidence.
+
+* Notify participating validators.
+
+* Determine whether the fault affects one component or the entire network.
+
+* Require authorized recovery before resumption.
+
+A critical distinction is necessary: suspension should not erase or reverse previously committed transactions.
+
+The system must preserve committed history while refusing unsafe new execution.
+
+For an integrity failure that affects consensus safety, the network must suspend consensus progress as well. For a localized resource failure, unrelated components may continue only if their safety and dependency boundaries are independently established.
+
+### 5.4 Recovery authorization
+
+Recovery requires:
+
+* Identified incident.
+
+* Root-cause assessment.
+
+* Verified restoration of affected components.
+
+* Valid cryptographic keys and validator configuration.
+
+* Approved recovery policy.
+
+* Governance authorization.
+
+* BFT recovery quorum.
+
+* A new verified checkpoint where necessary.
+
+A single operator must not be able to clear a network-wide safety hold.
+
+### 6\. Quorum rules and certificate construction
+
+The quorum model uses the conventional Byzantine fault tolerance relationship.
+
+N=3f+1Q=2f+1
+
+Where:
+
+* : Active validator population.
+
+* : Maximum tolerated Byzantine validators.
+
+* : Required quorum.
+
+### 6.1 Reference configurations
+
+| Validators | Fault tolerance | Quorum |
+| ---------- | --------------- | ------ |
+| 4          | 1               | 3      |
+| 7          | 2               | 5      |
+| 10         | 3               | 7      |
+| 13         | 4               | 9      |
+| 16         | 5               | 11     |
+| 19         | 6               | 13     |
+
+These configurations assume the active voting membership satisfies N = 3f + 1.
+
+### 6.2 Prepare and commit rules
+
+For the proposed CBBC voting profile:
+
+Prepare phase
+
+* Receive one valid proposal from the authorized leader.
+
+* Independently verify its digest and policy version.
+
+* Complete mandatory behavioral checks.
+
+* Issue a signed PREPARE vote.
+
+* Form a prepare certificate from distinct validator votes.
+
+Commit phase
+
+* Verify the prepare certificate.
+
+* Confirm the proposal remains valid and the validator is not locked on a conflicting value.
+
+* Issue a signed COMMIT vote.
+
+* Form a commit certificate from distinct validator votes.
+
+* Mark the state transition committed.
+
+For interoperability, the implementation must select and specify one exact BFT protocol profile. The above is a quorum-level description of a PBFT-style design, not a substitute for the complete PBFT prepared, committed-local, view-change, and new-view rules.
+
+### 6.3 Certificate requirements
+
+A valid commit certificate must establish:
+
+* Network identity.
+
+* Protocol version.
+
+* Epoch and view.
+
+* Sequence number.
+
+* Proposal digest.
+
+* Policy hash.
+
+* Required behavioral verification results.
+
+* At least distinct valid commit signatures.
+
+* Validator membership at the relevant epoch.
+
+Duplicate signatures from one validator count only once.
+
+A certificate referencing an outdated policy or validator configuration is invalid.
+
+### 6.4 Dual authorization formula
+
+Policy activation requires both governance approval and distributed consensus.
+
+P_A=G_A\\land Q_A
+
+Where:
+
+* = Valid governance authorization.
+
+* = Valid BFT commit certificate for the exact policy hash.
+
+Operational execution requires:
+
+E_A=Q_C\\land B_A\\land I_A
+
+Where:
+
+* = Valid transaction commit certificate.
+
+* = Behavioral policy admissibility.
+
+* = Integrity verification.
+
+The complete rule is:
+
+\\boxed{Execute=Q_C\\land B_A\\land I_A}
+
+This is the principal CBBC execution invariant.
+
+### 6.5 Membership changes
+
+Validator enrollment, removal, and replacement must be treated as configuration changes rather than ordinary transactions.
+
+A configuration transition must:
+
+* Be authorized under the existing configuration.
+
+* Identify the complete next validator membership.
+
+* Specify voting weights and public keys.
+
+* Specify the next fault threshold.
+
+* Be committed through the existing configuration's consensus.
+
+* Take effect at a defined epoch boundary.
+
+The system must never count votes from old and new configurations in an ambiguous manner. A joint-consensus or equivalent safe reconfiguration procedure is required.
+
+### 7\. Byzantine attack-resistance test suite
+
+The test suite should prove that CBBC maintains its safety properties when validators are faulty, compromised, dishonest, or disconnected.
+
+Required before production deployment
+
+### 7.1 Adversarial test matrix
+
+| Test ID | Attack simulation                            | Expected result                     |
+| ------- | -------------------------------------------- | ----------------------------------- |
+| T01     | One validator signs conflicting proposals    | Detect equivocation                 |
+| T02     | Two validators collude in a 7-node network   | Maintain safety                     |
+| T03     | Three validators attempt conflicting commits | No conflicting certificate          |
+| T04     | Replayed transaction                         | Reject duplicate sequence           |
+| T05     | Forged validator signature                   | Reject message                      |
+| T06     | Unauthorized policy modification             | Reject policy                       |
+| T07     | Oracle submits conflicting data              | Defer or suspend affected operation |
+| T08     | Resource provider falsely reports capacity   | Reject resource attestation         |
+| T09     | Leader becomes unavailable                   | Initiate view change                |
+| T10     | Network partition                            | Prevent conflicting commits         |
+| T11     | Corrupted persistence record                 | Detect integrity mismatch           |
+| T12     | Duplicate validator identity                 | Reject duplicate voting identity    |
+| T13     | Governance approval without BFT approval     | Prevent activation                  |
+| T14     | BFT approval without governance approval     | Prevent activation                  |
+| T15     | Invalid behavioral execution                 | Reject execution                    |
+| T16     | Recovery without required authorization      | Remain suspended                    |
+| T17     | Old policy hash submitted                    | Reject stale proposal               |
+| T18     | Malicious checkpoint                         | Reject unverified recovery state    |
+
+### 7.2 Detailed adversarial scenarios
+
+### T01 — Double-signing attack
+
+Scenario: A validator attempts to sign two conflicting proposals for the same consensus instance.
+
+Expected behavior:
+
+* Verify both signatures.
+
+* Detect conflicting signed digests.
+
+* Preserve both messages as evidence.
+
+* Mark the validator for protocol-violation review.
+
+* Prevent conflicting commits.
+
+A cryptographically provable double-sign should generate an equivocation record.
+
+### T02 — Byzantine collusion
+
+Scenario: Two validators coordinate malicious votes in a seven-validator network.
+
+N=7,\\quad f=2,\\quad Q=5
+
+Expected behavior:
+
+* Five valid votes remain necessary.
+
+* Two Byzantine participants cannot independently establish quorum.
+
+* Conflicting proposals cannot obtain two valid commit certificates.
+
+* Honest validators preserve safety.
+
+### T03 — Oracle manipulation
+
+Scenario: An Oracle submits inaccurate or contradictory external information.
+
+Expected behavior:
+
+* Verify the source identity.
+
+* Compare independent attestations.
+
+* Check evidence freshness.
+
+* Identify conflicting observations.
+
+* Return DEFER when confidence requirements are not satisfied.
+
+* Suspend affected execution if integrity is compromised.
+
+An Oracle quorum does not prove external truth. Source independence and the quality of the underlying evidence remain essential.
+
+### T04 — Network partition
+
+Scenario: A seven-validator network splits into groups of four and three.
+
+### Network partition simulation
+
+Partition A
+
+### 4
+
+Validators available
+
+Can reach quorum
+
+Partition B
+
+### 3
+
+Validators available
+
+Cannot reach quorum
+
+Required quorum: 5 validators.
+
+Partition A cannot commit unless it has five valid votes, and Partition B cannot commit independently.
+
+If the split is four versus three, neither partition can commit. If the network is split five versus two, the five-validator partition can continue under the protocol assumptions.
+
+This is a deliberate safety-over-availability decision during partitions.
+
+### T05 — Policy manipulation
+
+Scenario: A compromised governance participant submits a policy permitting unauthorized resource allocation.
+
+Expected behavior:
+
+* Validate the governance signature and approval threshold.
+
+* Verify the policy hash.
+
+* Require BFT consensus on the exact policy.
+
+* Reject activation without both authorization layers.
+
+* Preserve the attempted policy change.
+
+### T06 — Integrity failure
+
+Scenario: A persistent record differs from its committed cryptographic hash.
+
+Expected behavior:
+
+* Trigger SUSPEND.
+
+* Prevent dependent operations.
+
+* Preserve the last verified checkpoint.
+
+* Capture the discrepancy.
+
+* Identify affected replicas.
+
+* Require verified recovery.
+
+* Obtain the required recovery authorization before resumption.
+
+### 8\. Formal security invariants
+
+These properties are mandatory protocol requirements.
+
+| Invariant | Requirement                                                       |
+| --------- | ----------------------------------------------------------------- |
+| CBBC-S01  | No conflicting committed states.                                  |
+| CBBC-S02  | No execution without valid commit authorization.                  |
+| CBBC-S03  | No policy activation without dual authorization.                  |
+| CBBC-S04  | No duplicate validator vote counting.                             |
+| CBBC-S05  | No execution under an unauthorized policy version.                |
+| CBBC-S06  | No silent modification of committed records.                      |
+| CBBC-S07  | Integrity failure triggers suspension.                            |
+| CBBC-S08  | Recovery requires verified authorization.                         |
+| CBBC-S09  | Validator economic contribution cannot increase voting weight.    |
+| CBBC-S10  | Every committed transition has independently verifiable evidence. |
+
+### 8.1 Property-based testing
+
+Beyond the individual attacks, the engineering team should test properties across thousands of randomized event sequences.
+
+Examples:
+
+```text
+PROPERTY 1:
+For every committed sequence:
+There cannot exist two different committed proposal digests.
+
+PROPERTY 2:
+For every executed operation:
+A valid commit certificate must exist.
+
+PROPERTY 3:
+For every activated policy:
+Governance authorization AND BFT authorization must exist.
+
+PROPERTY 4:
+For every integrity failure:
+Affected execution must enter SUSPENDED.
+
+PROPERTY 5:
+For every recovery:
+A valid recovery certificate must exist.
+
+PROPERTY 6:
+For every validator:
+Voting weight must equal one.
+```
+
+These properties should be tested with:
+
+* Randomized message delivery.
+
+* Delayed and reordered messages.
+
+* Validator crashes.
+
+* Byzantine message generation.
+
+* Network partitions.
+
+* Restart and recovery sequences.
+
+* Invalid signatures.
+
+* Corrupted state snapshots.
+
+### 9\. Implementation architecture
+
+The recommended software organization is:
+
+### CBBC software stack
+
+01
+
+Identity and Membership
+
+Validator registry, key management, enrollment and configuration.
+
+02
+
+Policy Engine
+
+Canonical behavioral policies, dual approval, versioning.
+
+03
+
+Evidence Engine
+
+Provenance, source attestations and integrity validation.
+
+04
+
+Consensus Engine
+
+Proposal, prepare, commit, certificates and view changes.
+
+05
+
+Safety Controller
+
+Suspension, fault isolation and recovery authorization.
+
+06
+
+Execution Broker
+
+Workload scheduling, virtualization and resource attestation.
+
+07
+
+Persistence Engine
+
+Checkpoints, replication, archival and audit.
+
+### 9.1 Recommended technology boundaries
+
+| Subsystem        | Suggested technology                                          |
+| ---------------- | ------------------------------------------------------------- |
+| Consensus        | Proven PBFT implementation or rigorously specified equivalent |
+| Cryptography     | Ed25519 signatures and SHA-256 hashes                         |
+| Message encoding | Deterministic CBOR or canonical JSON                          |
+| Policy encoding  | Versioned JSON-based policy schema                            |
+| Persistence      | Replicated append-only records                                |
+| State integrity  | Merkle roots and signed checkpoints                           |
+| Execution        | Isolated containers or virtual machines                       |
+| Testing          | Property-based testing and Byzantine fault injection          |
+
+These are proposed technology choices, not requirements imposed by the protocol. Cryptographic algorithms, key rotation, serialization, and implementation libraries should undergo security review before deployment.
+
+### 10\. Deployment and acceptance criteria
+
+I recommend four development gates.
+
+Gate 1
+
+Protocol correctness
+
+* Validator enrollment and authentication.
+
+* Equal voting rights.
+
+* Policy encoding.
+
+* Dual authorization.
+
+* Prepare and commit certificates.
+
+Gate 2
+
+Adversarial resilience
+
+* Byzantine fault injection.
+
+* Equivocation detection.
+
+* Network partition testing.
+
+* Replay and forgery resistance.
+
+* Safety invariant verification.
+
+Gate 3
+
+Operational integrity
+
+* Suspension and recovery.
+
+* Persistence verification.
+
+* Resource attestation.
+
+* Oracle trust boundaries.
+
+* Independent audit.
+
+Gate 4
+
+Controlled economic pilot
+
+* Brokered execution.
+
+* Virtualization availability.
+
+* Contract settlement.
+
+* Escrow integration.
+
+* Transaction and taxation records.
+
+Production acceptance should require a documented safety argument, independent security assessment, successful fault-injection results, and verified recovery procedures. Passing a finite test suite alone does not prove Byzantine security.
+
+### 11\. Final CBBC v0.2 architectural definition
+
+### CBBC 0.2
+
+Conceptual Byzantine Behavioral Consensus
+
+Xenograph Analytics • +1HP • Modernization Integrity
+
+Governance
+
+Dual authorization: approved governance policy + distributed validator consensus.
+
+Consensus
+
+Hybrid validator network with equal voting weight and specialized verification.
+
+Quorum
+
+N=3f+1,\\qquad Q=2f+1
+
+Execution
+
+Execute=Q_C\\land B_A\\land I_A
+
+Failure
+
+Integrity failure → Suspend → Preserve → Investigate → Authorize Recovery.
+
+Persistence
+
+Cryptographically verifiable state transitions, checkpoints, and audit records.
+
+Governing doctrine
+
+Articulated substrate values become behavioral constraints. Behavioral constraints become verifiable policies. Verifiable policies govern distributed consensus. Consensus authorizes bounded execution. Persistent evidence establishes modernization integrity.
+
+### 12\. Relationship to the larger HI–ME–LO architecture
+
+The CBBC protocol becomes the consensus foundation of your larger architecture:
+
+| Architecture        | CBBC integration                                                          |
+| ------------------- | ------------------------------------------------------------------------- |
+| HI                  | Substrate values, behavioral policy, governance and Oracle interpretation |
+| ME                  | Validator coordination, consensus, execution and virtualization           |
+| LO                  | Cryptographic evidence, persistent state, audit and recovery              |
+| Xenograph Analytics | Evidence relationships, anomaly detection and analytical verification     |
+| GroundZer0          | Isolated execution and bounded virtualization environment                 |
+| Economic interface  | Brokerage, rental, escrow, settlement and enterprise participation        |
+
+The most important architectural advancement in v0.2 is the separation of consensus from behavioral authority. The network can agree on a transaction, but agreement alone does not make that transaction permissible. Governance, evidence, policy compliance, and integrity must independently satisfy the execution conditions.
+
+### 13\. Next development deliverable
+
+The logical next artifact is a CBBC v0.3 engineering package containing:
+
+* A complete protocol state-transition specification.
+
+* Machine-readable JSON schemas for every message.
+
+* Validator enrollment and membership procedures.
+
+* Executable consensus pseudocode.
+
+* A seven-validator reference simulation.
+
+* Automated Byzantine attack tests.
+
+* A security and recovery assessment.
+
+I would use seven validators, with two Byzantine participants injected into the simulation, as the initial reference environment.
+
