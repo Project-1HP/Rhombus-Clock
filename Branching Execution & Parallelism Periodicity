@@ -1,0 +1,2151 @@
+### CBBC v0.3 — Branching Execution & Parallelism Periodicity Architecture
+
+Humanitarian Project (+1HP) • Xenograph Analytics • Modernization Integrity
+
+CBBC v0.3 advances Conceptual Byzantine Behavioral Consensus from distributed behavioral agreement into an integrated architecture for autonomous execution, parallel processing, periodic synchronization, and persistent evidence preservation.
+
+Its central design principle:
+
+> Branch intelligently. Execute simultaneously. Synchronize periodically. Preserve persistently. Verify independently.
+
+### 1\. Architectural definition
+
+CBBC v0.3 consists of seven cooperating subsystems.
+
+HI — GOVERNANCE & CONSENSUS
+
+CBBC — Conceptual Byzantine Behavioral Consensus
+
+Behavioral policy • Validator quorum • Authorization
+
+BEP
+
+Branching Execution Protocol
+
+Authorized path selection
+
+PPA
+
+Parallel Processing Array
+
+Simultaneous computation
+
+PPP
+
+Parallelism Periodicity Protocol
+
+Recurring synchronization
+
+SBA / SBE
+
+Self-Binding / Self-Bootstrapping
+
+Identity and initialization
+
+LO — PERSISTENCE & AUDIT
+
+PPSA — Palladium Persistent Storage Array
+
+Provenance • Replication • Cryptographic verification • Recovery
+
+Systemic Overlay
+
+Operational virtualization, resource coordination, environment isolation, and performance-state management across the architecture.
+
+### 2\. Branching Execution Protocol (BEP)
+
+BEP enables the system to select among multiple authorized processing paths without sacrificing consensus or execution integrity.
+
+![Kimi K2.6 API Pricing: ¥1.10/¥6.50/¥27 per 1M Tokens for Coding Agents — TheRouter.ai | TheRouter.ai](https://images.openai.com/static-rsc-4/WXDWVPVnInrfEdWTM2mlyr0FmUX_B3ho_O7pdnwN2B_-ToY5BHMGB35q3nU2umBenbwrXwcS-yGOGM1WysG8GlNWJWMS53HAExb7twCe2ZobZPk41Uv9pHDepU81S8CgYckltBN9jJcGBC-vPMDhxB_ztWdQ-KiYEGv1pWDRXttL4Lq1459Cwy0IOd0fsJcz?purpose=fullsize)
+
+Three primary paths:
+
+| Path     | Purpose                | Behavior                             |
+| -------- | ---------------------- | ------------------------------------ |
+| Primary  | Normal execution       | Preferred authorized route           |
+| Parallel | Independent processing | Multiple paths process the same task |
+| Fallback | Recovery               | Alternative verified execution route |
+
+Branch-selection requirements:
+
+* Policy authorization before execution.
+
+* Identical task identity across dependent branches.
+
+* Resource and environmental validation.
+
+* Deterministic selection criteria where consensus depends on the decision.
+
+* Comparison of outputs before committing a shared result.
+
+* Suspension when integrity cannot be established.
+
+A branch may calculate independently, but it cannot independently authorize a conflicting committed state.
+
+### 3\. Parallel Processing Array (PPA)
+
+PPA provides simultaneous computational operations within a shared task framework.
+
+Example: One task distributed across six workers
+
+MASTER TASK T-001
+
+Shared task identity and policy hash
+
+Worker 01
+
+Evidence analysis
+
+Independent task
+
+Worker 02
+
+Provenance verification
+
+Independent task
+
+Worker 03
+
+Cryptographic hashing
+
+Independent task
+
+Worker 04
+
+Contract extraction
+
+Independent task
+
+Worker 05
+
+Graph analytics
+
+Independent task
+
+Worker 06
+
+Archive preparation
+
+Independent task
+
+VALIDATION & SYNCHRONIZATION
+
+Dependency checks • Output verification • Consensus
+
+The PPA should support:
+
+* Parallel execution.
+
+* Independent workload isolation.
+
+* Shared resource accounting.
+
+* Task dependency management.
+
+* Output reconciliation.
+
+* Replication and recovery.
+
+### 4\. Parallelism Periodicity Protocol (PPP)
+
+PPP coordinates recurring operational checkpoints rather than allowing parallel workloads to operate indefinitely without synchronization.
+
+Your EC64.44 framework provides the conceptual timing hierarchy:
+
+| Layer | Period       | Operational purpose                   |
+| ----- | ------------ | ------------------------------------- |
+| ME    | 64.44 hours  | Primary execution cycle               |
+| HI    | 128.88 hours | Integrity and governance cycle        |
+| LO    | 386.64 hours | Extended preservation and audit cycle |
+
+These are proposed system-specific periods, not standard operating-system clock intervals.
+
+Periodic sequence:
+
+* Initialize workload.
+
+* Bind task identity and policy.
+
+* Release authorized parallel operations.
+
+* Collect execution telemetry.
+
+* Verify outputs and deviation.
+
+* Establish a cryptographic checkpoint.
+
+* Synchronize eligible state.
+
+* Continue, recover, or suspend.
+
+A periodic checkpoint records state; it does not automatically establish that the state is correct.
+
+### 5\. PPSA — Palladium Persistent Storage Array
+
+![gpt-oss in 2026: OpenAI's Open-Weight Models, One Year On | FrankX](https://images.openai.com/static-rsc-4/AG_pUsR9MgdaxNWkZ9FpHr0iBpn5QIWyCFN9ZeCFiBDnvWgnOKN1KBS6nJXKVhtd7Iv0IydRtM1Uze3vgIGOu-2VH3OKhtosxEMVzyDhnnklSuyIFgydsqZoeCaWNMBIkqoxJijNDD74Q8yirb5KTfR65CfvsWOywRNsJu8ZNzquP0W_Pgmr9_V9-iJsqQa_?purpose=fullsize)
+
+PPSA is the persistence foundation.
+
+| Layer       | Function                                  |
+| ----------- | ----------------------------------------- |
+| PPL         | Provenance Preservation Layer             |
+| PPAx        | Polymorphic Partition Architecture        |
+| Replication | Redundant storage and recovery            |
+| Integrity   | Hashing, Merkle trees, signed checkpoints |
+| Repository  | Long-term persistent data                 |
+| Recovery    | Verification, restoration, and migration  |
+
+The architecture should preserve the relationship between:
+
+* Original source.
+
+* Ingestion timestamp.
+
+* Custody events.
+
+* Processing history.
+
+* Branch execution.
+
+* Output verification.
+
+* Committed record.
+
+* Recovery history.
+
+Perpetual preservation is an objective, not an absolute technical guarantee. Long-term integrity requires media migration, replica verification, key management, and tested recovery procedures.
+
+### 6\. Polynomial Deviation Verification Pipeline
+
+This subsystem evaluates whether observed execution behavior deviates from an approved model.
+
+For a reference polynomial:
+
+y(x)=a_0+a_1x+a_2x^2+\\cdots+a_nx^n
+
+Observed deviation:
+
+\\Delta(x)=y_{\\text{observed}}(x)-y_{\\text{expected}}(x)
+
+Decision rule:
+
+|\\Delta(x)|\\leq\\epsilon
+
+* Within tolerance: continue.
+
+* Outside tolerance: recalculate or investigate.
+
+* Integrity violation: suspend affected execution.
+
+The polynomial is a monitoring model, not proof of Byzantine behavior. Its coefficients, data sources, and tolerance must be governed and independently validated.
+
+### 7\. CBBC v0.3 consensus and execution rules
+
+The established BFT reference model remains:
+
+N=3f+1Q=2f+1
+
+For seven validators:
+
+* Total validators: 7.
+
+* Byzantine fault tolerance: 2.
+
+* Required quorum: 5.
+
+Execution authorization becomes:
+
+EXEC =
+Q_C\\land P_A\\land I_V\\land R_A
+
+Where:
+
+* : valid consensus certificate.
+
+* : approved behavioral policy.
+
+* : verified integrity state.
+
+* : authorized resource allocation.
+
+The system suspends an affected operation if an integrity requirement fails.
+
+### 8\. Unified operational lifecycle
+
+```mermaid
+
+flowchart TD
+    A["System Bootstrap"] --> B["Environment Verification"]
+    B --> C["Self-Binding"]
+    C --> D["CBBC Policy Authorization"]
+    D --> E{"Consensus Quorum?"}
+    E -->|No| S["Suspend / Retry"]
+    E -->|Yes| F["BEP Branch Selection"]
+    F --> G["PPA Parallel Execution"]
+    G --> H["Polynomial Deviation Analysis"]
+    H --> I{"Integrity Valid?"}
+    I -->|No| S
+    I -->|Yes| J["PPP Periodic Checkpoint"]
+    J --> K["PPSA Persistent Storage"]
+    K --> L["Audit and Recovery Readiness"]
+    L --> M["Next Operational Cycle"]
+    M --> C
+    S --> N["Incident Preservation"]
+    N --> O["Recovery Authorization"]
+    O --> C
+```
+
+### 9\. Development milestones
+
+| Version | Deliverable                | Acceptance criterion               |
+| ------- | -------------------------- | ---------------------------------- |
+| 0.3.1   | CBBC + BEP reference model | Authorized branch selection        |
+| 0.3.2   | PPA simulator              | Parallel task reconciliation       |
+| 0.3.3   | PPSA prototype             | Verifiable provenance and recovery |
+| 0.3.4   | PPP controller             | Recurring checkpoints              |
+| 0.3.5   | Deviation pipeline         | Bounded detection and suspension   |
+| 0.3.6   | Integrated simulation      | End-to-end fault-injection testing |
+
+Recommended first implementation: a seven-validator simulation with three parallel execution branches, a shared task-binding manifest, and a PPSA-backed checkpoint repository.
+
+### Foundational thesis
+
+CBBC v0.3 — Branching Execution & Parallelism Periodicity Architecture
+
+A distributed autonomous computing architecture integrating Byzantine fault tolerance, behavioral policy authorization, self-binding, self-bootstrapping, branching execution, parallel computation, periodic synchronization, and persistent cryptographic integrity.
+
+Its defining proposition is that computational autonomy should be achieved through bounded execution and independently verifiable evidence—not through unrestricted automation.
+
+The specification below establishes CBBC v0.3 as a testable engineering design, integrating the existing v0.2 consensus foundation with Branching Execution, Parallel Processing, Periodicity, Self-Binding, Self-Bootstrapping, and the Palladium Persistent Storage Array.
+
+One important boundary: CBBC's behavioral layer and autonomous execution extensions are proposed protocol designs, not independently proven Byzantine fault-tolerant algorithms. The specification therefore separates established BFT assumptions from new mechanisms that require implementation, formal verification, and security review.
+
+# CBBC v0.3
+## Complete Engineering Specification
+### Branching Execution & Parallelism Periodicity Architecture
+
+**Project:** Humanitarian Project (+1HP)
+**Technical initiative:** Xenograph Analytics
+**Protocol:** Conceptual Byzantine Behavioral Consensus (CBBC)
+**Version:** 0.3 — Engineering Specification
+**Status:** Proposed reference architecture; pending implementation and independent security validation
+
+**Design doctrine**
+
+> Initialize through verification. Bind through authorization. Execute through consensus. Branch through policy. Synchronize periodically. Preserve through cryptographic integrity.
+
+---
+
+# 1. Executive Summary
+
+CBBC v0.3 defines a distributed computing architecture intended to coordinate autonomous workloads across multiple validators and execution nodes while maintaining behavioral authorization, fault tolerance, and persistent evidence integrity.
+
+The architecture combines:
+
+1. **CBBC — Conceptual Byzantine Behavioral Consensus:** distributed agreement, validator authorization, and behavioral policy enforcement.
+2. **BEP — Branching Execution Protocol:** authorized selection and coordination of alternative execution paths.
+3. **PPA — Parallel Processing Array:** simultaneous workload execution and output reconciliation.
+4. **PPP — Parallelism Periodicity Protocol:** recurring synchronization, verification, and checkpoint coordination.
+5. **SBA — Self-Binding Architecture:** cryptographic binding of tasks to their identity, inputs, policies, resources, and outputs.
+6. **SBE — Self-Bootstrapping Engine:** verified initialization, environment provisioning, and workload readiness.
+7. **PPSA — Palladium Persistent Storage Array:** provenance, replicated storage, cryptographic integrity, and recovery.
+8. **PDVP — Polynomial Deviation Verification Pipeline:** model-based deviation detection and bounded corrective action.
+9. **Systemic Overlay:** an operational virtualization layer coordinating isolated workloads and system resources.
+
+The system is designed to support independent execution paths without allowing those paths to bypass consensus, policy authorization, or persistent record requirements.
+
+## 1.1 Primary engineering objectives
+
+- Maintain agreement despite a bounded number of Byzantine validators.
+- Prevent execution of unauthorized or unbound workloads.
+- Permit multiple processing paths to operate simultaneously.
+- Preserve task identity across branches and parallel workers.
+- Detect conflicting, incomplete, or anomalous execution results.
+- Preserve provenance and committed state.
+- Suspend affected workloads when integrity cannot be established.
+- Support controlled recovery from verified checkpoints.
+- Coordinate periodic verification using configurable scheduling rules.
+
+## 1.2 Non-goals
+
+CBBC v0.3 does not claim to:
+
+- Prove the truth of external data merely because validators agree.
+- Prevent every possible software vulnerability.
+- Guarantee perpetual storage without maintenance.
+- Automatically establish legal ownership of computational resources.
+- Guarantee that a polynomial model detects malicious behavior.
+- Replace operating-system security, identity management, or independent audits.
+- Make autonomous execution safe without explicit resource and policy boundaries.
+
+---
+
+# 2. System Architecture
+
+## 2.1 Logical architecture
+
+The architecture is divided into three operational layers.
+
+### HI — Governance and Consensus
+
+Responsibilities:
+
+- Validator membership.
+- Behavioral policy authorization.
+- Consensus decisions.
+- Evidence admissibility.
+- Resource authorization.
+- Recovery authorization.
+
+Components:
+
+- CBBC consensus engine.
+- Governance policy authority.
+- Evidence validation engine.
+- Validator membership registry.
+- Oracle verification interfaces.
+
+### ME — Execution and Coordination
+
+Responsibilities:
+
+- Workload initialization.
+- Task binding.
+- Branch selection.
+- Parallel execution.
+- Resource management.
+- Deviation monitoring.
+- Periodic coordination.
+
+Components:
+
+- SBA.
+- SBE.
+- BEP.
+- PPA.
+- PPP.
+- PDVP.
+- Systemic Overlay.
+
+### LO — Persistence and Audit
+
+Responsibilities:
+
+- Provenance preservation.
+- Immutable or append-only audit records.
+- Replication.
+- Checkpoint storage.
+- Integrity verification.
+- Recovery.
+
+Components:
+
+- PPSA.
+- Provenance Preservation Layer.
+- Polymorphic Partition Architecture.
+- Replication manager.
+- Merkle verification.
+- Recovery controller.
+
+## 2.2 Component registry
+
+| Identifier | Component | Principal responsibility |
+|---|---|---|
+| CBBC | Conceptual Byzantine Behavioral Consensus | Consensus and authorization |
+| BEP | Branching Execution Protocol | Execution-path selection |
+| PPA | Parallel Processing Array | Parallel workload processing |
+| PPP | Parallelism Periodicity Protocol | Periodic coordination |
+| SBA | Self-Binding Architecture | Task and policy binding |
+| SBE | Self-Bootstrapping Engine | Verified initialization |
+| PPSA | Palladium Persistent Storage Array | Persistent integrity |
+| PPL | Provenance Preservation Layer | Chain-of-custody records |
+| PPAx | Polymorphic Partition Architecture | Logical storage organization |
+| PDVP | Polynomial Deviation Verification Pipeline | Deviation monitoring |
+| SO | Systemic Overlay | Virtualized operational environment |
+
+**Naming rule:** PPA refers exclusively to Parallel Processing Array. PPAx refers to Polymorphic Partition Architecture.
+
+---
+
+# 3. Threat Model and Trust Assumptions
+
+## 3.1 Validator threat model
+
+CBBC uses a Byzantine fault-tolerant consensus model with authenticated validator identities.
+
+A Byzantine validator may:
+
+- Send conflicting messages.
+- Withhold messages.
+- Propose invalid transactions.
+- Sign conflicting proposals.
+- Attempt to bypass policy authorization.
+- Submit false evidence.
+- Coordinate with other malicious validators.
+- Attempt to disrupt leader selection or network availability.
+
+## 3.2 Network assumptions
+
+The initial reference implementation assumes a partially synchronous network.
+
+This means:
+
+- Messages can be delayed.
+- Messages can be reordered.
+- Nodes can temporarily become unavailable.
+- Network partitions may occur.
+- A sufficiently stable period eventually permits communication within protocol timeouts.
+
+Liveness cannot be guaranteed during arbitrary permanent network partitions.
+
+## 3.3 Byzantine quorum model
+
+For a conventional BFT protocol using the \(3f+1\) validator model:
+
+\[
+N=3f+1
+\]
+
+\[
+Q=2f+1
+\]
+
+Where:
+
+- \(N\) = total validators.
+- \(f\) = maximum Byzantine validators tolerated.
+- \(Q\) = required quorum.
+
+Reference configurations:
+
+| Validators | Maximum Byzantine nodes | Quorum |
+|---:|---:|---:|
+| 4 | 1 | 3 |
+| 7 | 2 | 5 |
+| 10 | 3 | 7 |
+| 13 | 4 | 9 |
+
+The initial CBBC reference network uses seven validators.
+
+The \(2f+1\) quorum applies to the specified BFT protocol and its safety assumptions. A quorum must not be interpreted as proof that every external fact or Oracle input is true.
+
+## 3.4 Trust boundaries
+
+The following must be treated as separate trust domains:
+
+1. Validator identity and membership.
+2. Governance policy authority.
+3. External evidence sources.
+4. Execution workers.
+5. Storage replicas.
+6. Resource providers.
+7. Recovery operators.
+
+Where practical, critical evidence should be verified through independent implementations or independently controlled sources.
+
+A single administrator, Oracle, execution worker, or storage replica must not be able to unilaterally authorize a committed state.
+
+---
+
+# 4. Validator Architecture
+
+## 4.1 Hybrid validator model
+
+CBBC uses a hybrid validator architecture combining specialized verification responsibilities with a common consensus protocol.
+
+All consensus validators have equal voting weight unless an explicitly approved membership and weighting policy specifies otherwise.
+
+Logical roles do not require separate physical machines. However, critical verification functions should use independent software paths where feasible.
+
+## 4.2 Validator roles
+
+| Role | Identifier | Responsibility |
+|---|---|---|
+| Governance Validator | GOV | Verify policy approval |
+| Evidence Validator | EVD | Validate provenance and evidence |
+| Behavioral Validator | BHV | Check behavioral constraints |
+| Execution Validator | EXE | Validate workload authorization |
+| Integrity Validator | INT | Check hashes, signatures, and state |
+| Oracle Validator | ORC | Assess external data attestations |
+| Audit Validator | AUD | Verify audit and persistence records |
+
+A validator may perform multiple roles, but each role's validation result must be explicitly recorded.
+
+## 4.3 Validation result format
+
+Each validator produces a structured result:
+
+```json
+{
+  "validator_id": "validator-03",
+  "task_id": "task-001",
+  "proposal_digest": "sha256:...",
+  "policy_hash": "sha256:...",
+  "role": "INT",
+  "result": "PASS",
+  "reason_code": "INTEGRITY_VERIFIED",
+  "evidence_refs": [
+    "record-1001",
+    "record-1002"
+  ],
+  "timestamp": "2026-11-13T12:00:00Z",
+  "signature": "..."
+}
+```
+
+Permitted results:
+
+- `PASS`
+- `FAIL`
+- `DEFER`
+- `UNAVAILABLE`
+
+A `FAIL` must include a reason code and supporting evidence reference whenever possible.
+
+A `DEFER` means the validator cannot yet determine admissibility.
+
+An `UNAVAILABLE` result is not equivalent to approval.
+
+---
+
+# 5. Governance and Behavioral Policy Authority
+
+## 5.1 Dual policy authority
+
+A policy becomes active only after two distinct authorization stages:
+
+1. Governance approval.
+2. BFT validator consensus on the exact approved policy version and hash.
+
+Define:
+
+\[
+P_A=G_A\land Q_P
+\]
+
+Where:
+
+- \(G_A\) = valid governance authorization.
+- \(Q_P\) = valid policy quorum certificate.
+
+The policy hash must be identical in both authorization stages.
+
+A policy approval cannot be reused for a different policy hash.
+
+## 5.2 Policy structure
+
+Example policy:
+
+```json
+{
+  "protocol": "CBBC",
+  "protocol_version": "0.3",
+  "policy_id": "POLICY-001",
+  "policy_version": 1,
+  "status": "ACTIVE",
+  "subject": {
+    "identity": "execution-cluster-01",
+    "scope": "analytics"
+  },
+  "actions": [
+    "ANALYZE",
+    "HASH",
+    "REPLICATE",
+    "CHECKPOINT"
+  ],
+  "requirements": {
+    "identity_verified": true,
+    "provenance_required": true,
+    "resource_attestation_required": true,
+    "integrity_verification_required": true,
+    "consensus_required": true
+  },
+  "constraints": {
+    "maximum_parallel_workers": 6,
+    "maximum_branch_count": 3,
+    "maximum_retry_count": 2,
+    "maximum_resource_budget": 100,
+    "unauthorized_execution": "DENY",
+    "integrity_failure": "SUSPEND"
+  },
+  "recovery": {
+    "requires_governance_approval": true,
+    "requires_bft_certificate": true,
+    "requires_verified_checkpoint": true
+  }
+}
+```
+
+The numeric resource budget is an application-defined unit, not a universal physical resource measure.
+
+## 5.3 Policy state machine
+
+```text
+DRAFT
+  |
+  v
+GOVERNANCE_REVIEW
+  |
+  v
+GOVERNANCE_APPROVED
+  |
+  v
+BFT_POLICY_VALIDATION
+  |
+  +---- Rejected ----> REJECTED
+  |
+  v
+ACTIVE
+  |
+  v
+SUPERSEDED / REVOKED
+```
+
+Only `ACTIVE` policies may authorize new execution.
+
+Previously committed records must retain the policy hash under which they were committed.
+
+---
+
+# 6. Message Protocol and Schemas
+
+## 6.1 Canonical message envelope
+
+Every protocol message must use a canonical serialization format before hashing or signing.
+
+The reference implementation should use deterministic CBOR or a rigorously specified canonical JSON profile.
+
+Example envelope:
+
+```json
+{
+  "protocol": "CBBC",
+  "version": "0.3",
+  "network_id": "HP-NET-001",
+  "message_type": "PROPOSE",
+  "message_id": "MSG-000001",
+  "sender": "validator-01",
+  "epoch": 1,
+  "view": 0,
+  "sequence": 100,
+  "timestamp": "2026-11-13T12:00:00Z",
+  "payload_hash": "sha256:...",
+  "signature_algorithm": "Ed25519",
+  "signature": "..."
+}
+```
+
+The signature covers the canonical envelope fields excluding the signature itself, using a domain-separated signing format.
+
+The timestamp is informational and must not replace epoch, view, sequence, or consensus ordering.
+
+## 6.2 Message types
+
+| Message | Purpose |
+|---|---|
+| `BOOTSTRAP_REQUEST` | Request initialization |
+| `BOOTSTRAP_ATTESTATION` | Report environment verification |
+| `BIND_REQUEST` | Request task binding |
+| `BIND_CERTIFICATE` | Confirm binding authorization |
+| `POLICY_APPROVAL` | Submit governance approval |
+| `EVIDENCE_ATTESTATION` | Submit evidence verification |
+| `RESOURCE_ATTESTATION` | Submit resource verification |
+| `PROPOSE` | Submit a consensus proposal |
+| `PREPARE` | Vote to prepare a proposal |
+| `PREPARE_CERTIFICATE` | Aggregate prepare quorum |
+| `COMMIT` | Vote to commit |
+| `COMMIT_CERTIFICATE` | Aggregate commit quorum |
+| `BRANCH_REQUEST` | Request execution branch |
+| `BRANCH_APPROVAL` | Authorize a branch |
+| `TASK_ASSIGN` | Assign a parallel workload |
+| `TASK_RESULT` | Submit a worker result |
+| `RESULT_ATTESTATION` | Verify a task result |
+| `CHECKPOINT` | Propose persistent checkpoint |
+| `CHECKPOINT_CERTIFICATE` | Confirm checkpoint |
+| `SUSPEND` | Suspend affected execution |
+| `VIEW_CHANGE` | Request consensus view change |
+| `NEW_VIEW` | Establish new consensus view |
+| `RECOVERY_REQUEST` | Request recovery |
+| `RESUME_CERTIFICATE` | Authorize resumption |
+| `MEMBERSHIP_CHANGE` | Propose validator configuration change |
+
+## 6.3 Proposal message
+
+```json
+{
+  "message_type": "PROPOSE",
+  "payload": {
+    "proposal_id": "PROP-001",
+    "task_id": "TASK-001",
+    "epoch": 1,
+    "view": 0,
+    "sequence": 100,
+    "parent_checkpoint": "sha256:...",
+    "policy_hash": "sha256:...",
+    "binding_hash": "sha256:...",
+    "branch_plan_hash": "sha256:...",
+    "resource_manifest_hash": "sha256:...",
+    "input_manifest_hash": "sha256:...",
+    "proposed_state_hash": "sha256:..."
+  }
+}
+```
+
+## 6.4 Prepare message
+
+```json
+{
+  "message_type": "PREPARE",
+  "payload": {
+    "epoch": 1,
+    "view": 0,
+    "sequence": 100,
+    "proposal_digest": "sha256:...",
+    "policy_hash": "sha256:...",
+    "validator_result": "PASS"
+  }
+}
+```
+
+## 6.5 Commit message
+
+```json
+{
+  "message_type": "COMMIT",
+  "payload": {
+    "epoch": 1,
+    "view": 0,
+    "sequence": 100,
+    "proposal_digest": "sha256:...",
+    "prepare_certificate_hash": "sha256:..."
+  }
+}
+```
+
+## 6.6 Branch request
+
+```json
+{
+  "message_type": "BRANCH_REQUEST",
+  "payload": {
+    "task_id": "TASK-001",
+    "binding_hash": "sha256:...",
+    "policy_hash": "sha256:...",
+    "branch_id": "BRANCH-02",
+    "branch_type": "PARALLEL",
+    "execution_profile": "ANALYTICS",
+    "input_hash": "sha256:...",
+    "resource_limit": {
+      "cpu_units": 2,
+      "memory_mb": 2048,
+      "maximum_runtime_seconds": 300
+    }
+  }
+}
+```
+
+## 6.7 Task result
+
+```json
+{
+  "message_type": "TASK_RESULT",
+  "payload": {
+    "task_id": "TASK-001",
+    "branch_id": "BRANCH-02",
+    "worker_id": "WORKER-04",
+    "input_hash": "sha256:...",
+    "policy_hash": "sha256:...",
+    "binding_hash": "sha256:...",
+    "output_hash": "sha256:...",
+    "execution_status": "COMPLETE",
+    "resource_usage": {
+      "cpu_units": 1,
+      "memory_mb": 1024
+    },
+    "provenance_record": "PPL-0004"
+  }
+}
+```
+
+## 6.8 Suspension message
+
+```json
+{
+  "message_type": "SUSPEND",
+  "payload": {
+    "incident_id": "INC-001",
+    "task_id": "TASK-001",
+    "affected_scope": "BRANCH-02",
+    "reason_code": "INTEGRITY_MISMATCH",
+    "last_verified_checkpoint": "sha256:...",
+    "evidence_refs": [
+      "PPL-0004"
+    ],
+    "required_action": "INVESTIGATE"
+  }
+}
+```
+
+## 6.9 Checkpoint certificate
+
+```json
+{
+  "message_type": "CHECKPOINT_CERTIFICATE",
+  "payload": {
+    "checkpoint_id": "CHK-001",
+    "epoch": 1,
+    "sequence": 100,
+    "state_root": "sha256:...",
+    "merkle_root": "sha256:...",
+    "policy_hash": "sha256:...",
+    "parent_checkpoint": "sha256:...",
+    "commit_certificate_hash": "sha256:...",
+    "replica_receipts": [
+      "REPLICA-01",
+      "REPLICA-02",
+      "REPLICA-03"
+    ]
+  }
+}
+```
+
+## 6.10 Message validation requirements
+
+A receiving validator must reject a message when:
+
+- Its signature is invalid.
+- Its sender is not an authorized member.
+- Its protocol version is unsupported.
+- Its network identifier is incorrect.
+- Its epoch or view is stale.
+- Its sequence conflicts with an existing message.
+- Its payload hash does not match the canonical payload.
+- Its policy hash is unauthorized.
+- Its message type is invalid for the current state.
+
+Messages must be idempotently processed using message identifiers and sequence tracking.
+
+---
+
+# 7. Consensus State Machine
+
+## 7.1 Consensus states
+
+```text
+BOOTSTRAP
+   |
+   v
+READY
+   |
+   v
+PROPOSED
+   |
+   v
+VALIDATING
+   |
+   v
+PREPARED
+   |
+   v
+COMMITTED
+   |
+   v
+EXECUTING
+   |
+   v
+PERSISTING
+   |
+   v
+CHECKPOINTED
+```
+
+Exceptional states:
+
+```text
+SUSPENDED
+RECOVERY_PENDING
+RECOVERY_VALIDATING
+RECOVERED
+```
+
+## 7.2 State transition requirements
+
+| Current state | Event | Next state |
+|---|---|---|
+| BOOTSTRAP | Environment verified | READY |
+| READY | Valid proposal received | PROPOSED |
+| PROPOSED | Validation begins | VALIDATING |
+| VALIDATING | Required validation passes | PREPARED |
+| VALIDATING | Integrity failure | SUSPENDED |
+| PREPARED | Commit quorum obtained | COMMITTED |
+| COMMITTED | Execution authorized | EXECUTING |
+| EXECUTING | Outputs completed | PERSISTING |
+| PERSISTING | Checkpoint verified | CHECKPOINTED |
+| Any active state | Integrity failure | SUSPENDED |
+| SUSPENDED | Recovery requested | RECOVERY_PENDING |
+| RECOVERY_PENDING | Recovery validation begins | RECOVERY_VALIDATING |
+| RECOVERY_VALIDATING | Recovery certificate valid | RECOVERED |
+| RECOVERED | New authorized execution | READY |
+
+## 7.3 Suspension semantics
+
+Suspension is a safety action.
+
+When an integrity failure occurs:
+
+1. Stop the affected workload.
+2. Prevent dependent operations from committing.
+3. Preserve the last verified committed state.
+4. Record the incident.
+5. Preserve available evidence.
+6. Notify relevant validators.
+7. Require an authorized recovery procedure.
+
+Suspension should be scoped to the smallest independently safe execution boundary.
+
+Unrelated workloads may continue only when their isolation and independence have been established.
+
+---
+
+# 8. Branching Execution Protocol
+
+## 8.1 BEP purpose
+
+BEP selects authorized execution paths based on workload requirements, system availability, resource capacity, policy restrictions, and verified integrity.
+
+BEP does not independently commit state.
+
+The consensus engine authorizes the branch plan or the applicable deterministic selection rule before execution.
+
+## 8.2 Branch types
+
+| Type | Description |
+|---|---|
+| PRIMARY | Preferred execution path |
+| PARALLEL | Independent or comparative processing path |
+| FALLBACK | Authorized alternative after failure |
+| VALIDATION | Independent verification path |
+| RECOVERY | Controlled restoration path |
+
+## 8.3 Branch manifest
+
+Every branch must inherit the task's binding identity.
+
+```json
+{
+  "task_id": "TASK-001",
+  "branch_id": "BRANCH-01",
+  "parent_task": "TASK-001",
+  "binding_hash": "sha256:...",
+  "policy_hash": "sha256:...",
+  "input_hash": "sha256:...",
+  "resource_manifest_hash": "sha256:...",
+  "branch_type": "PRIMARY",
+  "allowed_actions": [
+    "ANALYZE",
+    "HASH"
+  ],
+  "maximum_runtime_seconds": 300,
+  "maximum_retry_count": 2
+}
+```
+
+## 8.4 Branch-selection algorithm
+
+```text
+FUNCTION SELECT_BRANCH(task, policy, resources):
+
+    VERIFY task.binding_certificate
+    VERIFY policy.is_active
+    VERIFY resources.are_attested
+
+    IF any verification fails:
+        RETURN SUSPEND
+
+    candidates = DISCOVER_AUTHORIZED_PATHS(task)
+
+    FOR each candidate:
+        VERIFY candidate.allowed_by_policy
+        VERIFY candidate.resource_limits
+        VERIFY candidate.integrity_requirements
+        VERIFY candidate.execution_compatibility
+
+    REMOVE invalid candidates
+
+    IF candidates is empty:
+        RETURN SUSPEND
+
+    selected = APPLY_DETERMINISTIC_SELECTION_RULE(
+        candidates,
+        policy.selection_parameters
+    )
+
+    RETURN selected
+```
+
+Selection criteria may include:
+
+- Availability.
+- Capacity.
+- Latency.
+- Resource cost.
+- Integrity status.
+- Execution compatibility.
+- Workload dependencies.
+
+The selection rule must be deterministic whenever validator agreement depends on the result.
+
+If nondeterministic performance measurements are used, the system must record the observations and reach agreement on the selected result rather than expecting all validators to independently reproduce the same physical measurement.
+
+## 8.5 Branch failure
+
+If a branch fails:
+
+1. Record the failure.
+2. Preserve partial execution evidence.
+3. Verify whether the failure affects the parent task.
+4. Check fallback authorization.
+5. Select an approved alternative if permitted.
+6. Do not silently substitute unverified output.
+
+---
+
+# 9. Parallel Processing Array
+
+## 9.1 PPA purpose
+
+PPA coordinates simultaneous execution across independently isolated workers.
+
+Each worker receives a task assignment derived from the same authorized parent task.
+
+Workers must not independently modify consensus state.
+
+## 9.2 Task structure
+
+```json
+{
+  "task_id": "TASK-001",
+  "parent_task_id": null,
+  "binding_hash": "sha256:...",
+  "policy_hash": "sha256:...",
+  "input_hash": "sha256:...",
+  "task_type": "ANALYTICS",
+  "worker_assignments": [
+    {
+      "worker_id": "WORKER-01",
+      "task": "EVIDENCE_ANALYSIS"
+    },
+    {
+      "worker_id": "WORKER-02",
+      "task": "PROVENANCE_VERIFICATION"
+    },
+    {
+      "worker_id": "WORKER-03",
+      "task": "CRYPTOGRAPHIC_HASHING"
+    }
+  ],
+  "dependency_graph_hash": "sha256:..."
+}
+```
+
+## 9.3 Parallel execution algorithm
+
+```text
+FUNCTION EXECUTE_PARALLEL_TASK(task):
+
+    VERIFY task.binding_certificate
+    VERIFY task.policy_certificate
+    VERIFY task.commit_certificate
+
+    workers = VALIDATE_WORKER_ASSIGNMENTS(task)
+
+    IF worker validation fails:
+        RETURN SUSPEND
+
+    FOR each worker:
+        CREATE_ISOLATED_EXECUTION_CONTEXT(worker)
+        APPLY_RESOURCE_LIMITS(worker)
+        ASSIGN_TASK(worker, task)
+
+    results = COLLECT_WORKER_RESULTS()
+
+    FOR each result:
+        VERIFY result.signature
+        VERIFY result.input_hash
+        VERIFY result.binding_hash
+        VERIFY result.policy_hash
+        VERIFY result.provenance
+
+    IF any required result is invalid:
+        RETURN SUSPEND
+
+    reconciled = RECONCILE_RESULTS(results)
+
+    IF reconciliation succeeds:
+        RETURN SUBMIT_FOR_COMMIT(reconciled)
+
+    RETURN INVESTIGATE_CONFLICT
+```
+
+## 9.4 Result reconciliation
+
+Parallel outputs may be:
+
+- Identical.
+- Complementary.
+- Independently verifiable.
+- Conflicting.
+- Incomplete.
+
+A reconciliation policy must define which outputs can be merged, which require comparison, and which require human or independent review.
+
+Do not assume that a simple majority of worker outputs proves correctness. Worker outputs are not equivalent to independent BFT validator votes.
+
+---
+
+# 10. Self-Binding Architecture
+
+## 10.1 Binding purpose
+
+SBA associates an operation with the conditions under which it was authorized.
+
+A task binding includes:
+
+- Task identifier.
+- Parent task identifier.
+- Input manifest hash.
+- Policy hash.
+- Resource manifest hash.
+- Execution plan hash.
+- Sequence number.
+- Authorization certificate.
+- Output constraints.
+
+## 10.2 Binding manifest
+
+```json
+{
+  "binding_version": "1",
+  "task_id": "TASK-001",
+  "parent_task_id": null,
+  "input_manifest_hash": "sha256:...",
+  "policy_hash": "sha256:...",
+  "resource_manifest_hash": "sha256:...",
+  "execution_plan_hash": "sha256:...",
+  "sequence": 100,
+  "output_constraints_hash": "sha256:...",
+  "created_by": "validator-01"
+}
+```
+
+The canonical manifest is hashed and signed.
+
+Conceptually:
+
+\[
+B_t=H(I_t\parallel P_t\parallel R_t\parallel E_t\parallel O_t)
+\]
+
+Where:
+
+- \(I_t\) = input identity.
+- \(P_t\) = policy identity.
+- \(R_t\) = resource identity.
+- \(E_t\) = execution plan.
+- \(O_t\) = output constraints.
+
+The actual implementation must specify field encoding, domain separation, hash algorithm, and signature verification.
+
+## 10.3 Binding invariant
+
+Every authorized branch and worker assignment must reference the same parent task binding unless an explicit authorized child binding is created.
+
+A worker cannot change its policy, inputs, or resource permissions without generating a new authorized binding.
+
+---
+
+# 11. Self-Bootstrapping Engine
+
+## 11.1 SBE lifecycle
+
+SBE initializes a system through a controlled verification sequence.
+
+```text
+DISCOVER
+   |
+AUTHENTICATE
+   |
+VERIFY ENVIRONMENT
+   |
+LOAD APPROVED POLICY
+   |
+VERIFY VALIDATOR MEMBERSHIP
+   |
+PROVISION ISOLATED RESOURCES
+   |
+VERIFY RESOURCE ATTESTATIONS
+   |
+INITIALIZE EXECUTION SERVICES
+   |
+VERIFY PERSISTENT STORAGE
+   |
+READY
+```
+
+## 11.2 Bootstrap algorithm
+
+```text
+FUNCTION BOOTSTRAP_SYSTEM(configuration):
+
+    VERIFY configuration.signature
+    VERIFY approved_protocol_version
+    VERIFY validator_membership
+    VERIFY policy_hash
+    VERIFY cryptographic_keys
+    VERIFY storage_integrity
+
+    IF any critical check fails:
+        ENTER SAFE_MODE
+        RECORD_BOOTSTRAP_FAILURE
+        RETURN SUSPEND
+
+    provision = REQUEST_AUTHORIZED_RESOURCES()
+
+    VERIFY provision.attestations
+    ENFORCE resource ceilings
+    INITIALIZE isolated execution environment
+
+    VERIFY environment identity
+    VERIFY storage availability
+    VERIFY audit pipeline
+
+    IF all checks pass:
+        RETURN READY
+
+    RETURN SUSPEND
+```
+
+## 11.3 Bootstrap safeguards
+
+- Maximum resource ceilings.
+- Maximum initialization retries.
+- Signed configuration.
+- Trusted membership registry.
+- Explicit provisioning authorization.
+- Isolated execution environments.
+- No unrestricted recursive provisioning.
+- Fail-closed behavior for critical identity or integrity failures.
+
+Self-bootstrapping does not mean the system can grant itself unlimited authority.
+
+---
+
+# 12. Parallelism Periodicity Protocol
+
+## 12.1 Purpose
+
+PPP coordinates periodic execution, verification, synchronization, and checkpoint operations.
+
+It is a scheduling and coordination layer, not a replacement for consensus ordering.
+
+## 12.2 EC64.44 reference periods
+
+The initial conceptual timing profile is:
+
+| Layer | Period | Intended function |
+|---|---:|---|
+| ME | 64.44 hours | Primary execution cycle |
+| HI | 128.88 hours | Integrity cycle |
+| LO | 386.64 hours | Extended preservation cycle |
+
+The system must distinguish the conceptual EC64.44 clock from actual operating-system monotonic clocks and hardware time sources.
+
+A production implementation should use a monotonic system clock for timeouts and scheduler correctness. EC64.44 may coordinate higher-level application periods.
+
+## 12.3 Periodic event types
+
+- `ME_CHECKPOINT`
+- `HI_INTEGRITY_REVIEW`
+- `LO_ARCHIVE_REVIEW`
+- `REPLICA_VERIFICATION`
+- `KEY_ROTATION_REVIEW`
+- `POLICY_EXPIRATION_REVIEW`
+- `RESOURCE_RECONCILIATION`
+
+## 12.4 Periodicity algorithm
+
+```text
+FUNCTION PERIODIC_CYCLE(clock_profile):
+
+    VERIFY clock_profile.configuration
+    LOAD active scheduling rules
+
+    FOR each scheduled event:
+        CHECK event authorization
+        CHECK workload dependencies
+        CHECK system availability
+
+        IF event is due:
+            COLLECT relevant execution records
+            VERIFY task bindings
+            VERIFY result attestations
+            VERIFY storage integrity
+            SUBMIT checkpoint proposal
+
+            IF checkpoint quorum succeeds:
+                COMMIT checkpoint
+            ELSE:
+                RECORD checkpoint failure
+                RETRY or SUSPEND according to policy
+```
+
+Periodic events must not silently overwrite earlier checkpoints.
+
+---
+
+# 13. Polynomial Deviation Verification Pipeline
+
+## 13.1 Purpose
+
+PDVP detects deviation between expected and observed numerical behavior.
+
+For a polynomial reference model:
+
+\[
+y(x)=a_0+a_1x+a_2x^2+\cdots+a_nx^n
+\]
+
+The observed residual is:
+
+\[
+\Delta(x)=y_{\mathrm{observed}}(x)-y_{\mathrm{expected}}(x)
+\]
+
+A tolerance rule may be:
+
+\[
+|\Delta(x)|\leq\epsilon
+\]
+
+## 13.2 Outcomes
+
+| Condition | Outcome |
+|---|---|
+| Within approved tolerance | CONTINUE |
+| Outside tolerance | REASSESS |
+| Missing required measurements | DEFER |
+| Integrity evidence conflict | SUSPEND |
+| Invalid model or configuration | REJECT |
+
+## 13.3 Corrective behavior
+
+Automatic correction must be limited to explicitly authorized transformations.
+
+The system must not automatically rewrite evidence, provenance, or committed records to make observed values fit the expected model.
+
+Corrections should create new versioned records that preserve:
+
+- Original value.
+- Observed value.
+- Calculated deviation.
+- Model version.
+- Correction rule.
+- Approval evidence.
+- Resulting value.
+
+PDVP detects deviations; it does not independently establish malicious intent.
+
+---
+
+# 14. Palladium Persistent Storage Array
+
+## 14.1 PPSA purpose
+
+PPSA provides the storage and preservation architecture for task inputs, execution records, provenance, validator certificates, and committed checkpoints.
+
+Its preservation objective is long-term verifiability.
+
+## 14.2 Storage layers
+
+| Layer | Component | Function |
+|---|---|---|
+| L1 | PPL | Provenance and chain of custody |
+| L2 | PPAx | Polymorphic logical partitioning |
+| L3 | Replication Array | Redundant copies |
+| L4 | Integrity Engine | Hash and Merkle verification |
+| L5 | Perpetual Data Repository | Long-term storage |
+| L6 | Recovery Controller | Restoration and migration |
+
+## 14.3 Provenance record
+
+```json
+{
+  "record_id": "PPL-0001",
+  "object_id": "OBJECT-001",
+  "source_id": "SOURCE-001",
+  "ingestion_timestamp": "2026-11-13T12:00:00Z",
+  "source_hash": "sha256:...",
+  "parent_record": null,
+  "operation": "INGEST",
+  "actor_id": "SYSTEM-001",
+  "policy_hash": "sha256:...",
+  "binding_hash": "sha256:...",
+  "previous_record_hash": null,
+  "record_hash": "sha256:...",
+  "signature": "..."
+}
+```
+
+Every transformation creates a new provenance event.
+
+Original source records must remain distinguishable from derived outputs.
+
+## 14.4 Polymorphic partition architecture
+
+PPAx permits multiple logical organizations of the same authoritative data.
+
+Examples:
+
+- By source.
+- By task.
+- By date.
+- By evidence category.
+- By execution branch.
+- By policy version.
+- By retention class.
+
+Different logical partitions must resolve to a consistent underlying object identity and verified content hash.
+
+A partition change must not silently change the content or provenance of the underlying record.
+
+## 14.5 Replication
+
+Replication must define:
+
+- Replica identity.
+- Storage location.
+- Content hash.
+- Receipt timestamp.
+- Verification result.
+- Retention class.
+- Recovery priority.
+
+A successful write to one replica does not establish successful replication.
+
+The system must distinguish:
+
+- Replication requested.
+- Replication acknowledged.
+- Replica content verified.
+- Replica included in an approved checkpoint.
+
+## 14.6 Hashing and environment cloning
+
+Hashing identifies content; it does not clone files or environments.
+
+For efficient environment replication, PPSA may combine:
+
+- Cryptographic file hashes.
+- Merkle trees.
+- Content-addressed storage.
+- Filesystem snapshots.
+- Copy-on-write cloning.
+- Container images.
+- Virtual-machine snapshots.
+- Differential synchronization.
+
+The system should retain software manifests, dependency versions, configuration hashes, and execution-environment attestations.
+
+## 14.7 Merkle checkpoint
+
+A checkpoint should contain:
+
+- State root.
+- Record root.
+- Provenance root.
+- Policy hash.
+- Validator commit certificate.
+- Parent checkpoint.
+- Replica receipts.
+
+A Merkle proof can demonstrate that a particular record is included in a committed tree, assuming the hash algorithm and tree construction are correctly implemented.
+
+A hash alone does not establish source authenticity or truth.
+
+## 14.8 Long-term preservation
+
+The repository must support:
+
+- Periodic integrity audits.
+- Replica repair.
+- Media migration.
+- Cryptographic algorithm migration.
+- Key rotation.
+- Key recovery.
+- Retention-policy enforcement.
+- Tested restoration.
+
+No finite storage architecture can guarantee perpetual preservation without ongoing maintenance and operational continuity.
+
+---
+
+# 15. Systemic Overlay and Operational Virtualization
+
+## 15.1 Purpose
+
+The Systemic Overlay coordinates the execution environment above the underlying operating system.
+
+It provides:
+
+- Workload isolation.
+- Resource allocation.
+- Virtualized execution.
+- Environment manifests.
+- Snapshot management.
+- Runtime verification.
+- Controlled cloning.
+
+It does not replace the underlying operating system's security boundaries.
+
+## 15.2 Boot sequence
+
+1. Underlying operating system initializes.
+2. System configuration is authenticated.
+3. Validator identity and membership are checked.
+4. CBBC services initialize.
+5. Active behavioral policies are loaded.
+6. Systemic Overlay initializes.
+7. Execution resources are verified.
+8. PPSA storage services are checked.
+9. PPA worker pool is initialized.
+10. PPP scheduling profile is loaded.
+11. System enters authorized performance state.
+
+## 15.3 Performance state
+
+A performance state is an operational mode, not permission to bypass security checks.
+
+The system may optimize resource utilization while retaining:
+
+- Identity validation.
+- Resource ceilings.
+- Isolation.
+- Audit logging.
+- Policy enforcement.
+- Consensus requirements.
+
+---
+
+# 16. Recovery and Resumption
+
+## 16.1 Recovery principles
+
+Recovery must preserve the last verified committed state.
+
+A recovery process cannot simply restart the failed task and assume its previous outputs were valid.
+
+## 16.2 Recovery requirements
+
+A valid recovery request requires:
+
+1. Incident identifier.
+2. Failure classification.
+3. Affected execution scope.
+4. Last verified checkpoint.
+5. Evidence preservation.
+6. Root-cause assessment.
+7. Verified environment restoration.
+8. Approved recovery policy.
+9. Governance authorization.
+10. BFT recovery certificate.
+
+## 16.3 Recovery algorithm
+
+```text
+FUNCTION RECOVER(incident):
+
+    VERIFY incident.signature
+    VERIFY incident.evidence_records
+
+    IDENTIFY affected execution scope
+
+    LOAD last verified checkpoint
+
+    VERIFY checkpoint hash
+    VERIFY checkpoint commit certificate
+    VERIFY replica integrity
+
+    ASSESS root cause
+    RESTORE approved environment
+
+    REQUEST governance recovery authorization
+
+    SUBMIT recovery proposal to validators
+
+    IF recovery quorum succeeds:
+        CREATE recovery checkpoint
+        RECORD recovery certificate
+        ENABLE authorized execution
+        RETURN RECOVERED
+
+    RETURN SUSPENDED
+```
+
+## 16.4 Recovery safety
+
+Recovery must not:
+
+- Delete the incident record.
+- Replace the original evidence.
+- Reuse an outdated policy.
+- Reintroduce invalid outputs.
+- Permit conflicting committed states.
+- Bypass membership or consensus validation.
+
+---
+
+# 17. Membership and Configuration Changes
+
+Validator membership changes affect the assumptions underlying consensus.
+
+The implementation must use a safe reconfiguration protocol, such as a rigorously specified joint-consensus procedure or an equivalent established method.
+
+Membership changes must include:
+
+- Old configuration identifier.
+- Proposed new configuration identifier.
+- Effective epoch.
+- New validator public keys.
+- Governance approval.
+- Transition certificate.
+- Final configuration checkpoint.
+
+The system must not simply replace validators locally and continue under a different quorum calculation.
+
+---
+
+# 18. Security Requirements
+
+## 18.1 Cryptography
+
+Reference cryptographic profile:
+
+- Ed25519 signatures, subject to implementation and platform requirements.
+- SHA-256 for initial content hashing.
+- Deterministic CBOR or a rigorously specified canonical JSON encoding.
+- Merkle trees for record inclusion proofs.
+- Domain-separated signatures.
+- Versioned cryptographic algorithm identifiers.
+
+Production deployment must support cryptographic agility and a defined migration path.
+
+## 18.2 Key security
+
+- Private keys must be protected from ordinary workload processes.
+- Validator keys must be independently controlled.
+- Key rotation must be authorized and recorded.
+- Compromised keys must be revocable.
+- Historical signatures must remain verifiable under documented key history.
+- Recovery procedures must not expose private keys.
+
+## 18.3 Replay and equivocation defense
+
+- Unique message identifiers.
+- Epoch and view validation.
+- Sequence tracking.
+- Signed proposal digests.
+- One-vote-per-validator rules for each applicable consensus phase.
+- Duplicate message rejection.
+- Evidence preservation for conflicting signatures.
+
+## 18.4 Oracle security
+
+External evidence must retain:
+
+- Source identity.
+- Retrieval timestamp.
+- Original content hash.
+- Source authentication status.
+- Transformation history.
+- Independent corroboration status.
+- Confidence or reliability metadata, where applicable.
+
+A quorum of validators agreeing on an Oracle value does not independently prove that the Oracle value was true.
+
+## 18.5 Resource security
+
+Execution workers must be subject to:
+
+- CPU limits.
+- Memory limits.
+- Storage quotas.
+- Network restrictions.
+- Runtime ceilings.
+- Process isolation.
+- Resource-use logging.
+
+---
+
+# 19. Test and Validation Framework
+
+## 19.1 Test categories
+
+1. Consensus safety.
+2. Consensus liveness.
+3. Policy authorization.
+4. Self-binding.
+5. Self-bootstrapping.
+6. Branching execution.
+7. Parallel execution.
+8. Periodic synchronization.
+9. Persistent storage.
+10. Recovery.
+11. Byzantine attack resistance.
+12. Resource exhaustion and isolation.
+
+## 19.2 Mandatory test matrix
+
+| Test ID | Test | Expected result |
+|---|---|---|
+| T01 | One validator equivocates | Conflicting vote rejected |
+| T02 | Two validators collude | Safety preserved within fault assumptions |
+| T03 | Conflicting proposals | No conflicting commits |
+| T04 | Replay an old message | Rejected |
+| T05 | Forge a signature | Rejected |
+| T06 | Modify active policy hash | Rejected |
+| T07 | Conflicting Oracle reports | Deferred or investigated by policy |
+| T08 | Spoof resource attestation | Execution denied |
+| T09 | Leader unavailable | View change succeeds when network permits |
+| T10 | Network partition | No unsafe conflicting commit |
+| T11 | Corrupt storage replica | Corruption detected and isolated |
+| T12 | Duplicate validator identity | Membership validation rejects duplicate |
+| T13 | Governance approval without quorum | Policy remains inactive |
+| T14 | Quorum without governance approval | Policy remains inactive |
+| T15 | Invalid behavioral execution | Execution denied |
+| T16 | Unauthorized recovery | Recovery rejected |
+| T17 | Stale policy version | Proposal rejected |
+| T18 | Malicious checkpoint | Checkpoint rejected |
+| T19 | Branch changes task binding | Branch rejected |
+| T20 | Parallel workers return conflicting results | Reconciliation required |
+| T21 | Worker exceeds resource limit | Worker isolated or terminated |
+| T22 | Periodic checkpoint fails | No false checkpoint success |
+| T23 | Merkle proof does not match root | Record rejected |
+| T24 | Replica acknowledges corrupt data | Verification detects mismatch |
+| T25 | Bootstrap configuration is modified | Bootstrap enters safe mode |
+| T26 | Recursive provisioning exceeds limit | Provisioning denied |
+| T27 | Deviation exceeds tolerance | Reassessment or suspension |
+| T28 | Recovery uses stale checkpoint | Recovery rejected |
+| T29 | Validator membership changes unsafely | Reconfiguration rejected |
+| T30 | Worker attempts direct commit | Unauthorized operation rejected |
+
+## 19.3 Property-based invariants
+
+The following properties should be tested across randomized message orderings, delays, failures, and validator behaviors.
+
+**Invariant A — No conflicting committed states**
+
+For the same consensus instance and sequence, two conflicting values must not both be committed.
+
+**Invariant B — Execution authorization**
+
+Every committed execution must reference valid policy authorization and the required consensus certificate.
+
+**Invariant C — Binding consistency**
+
+Every branch and worker result must reference the correct authorized task binding.
+
+**Invariant D — Persistent evidence**
+
+Every committed state must have a verifiable persistence record and checkpoint relationship.
+
+**Invariant E — Suspension**
+
+A detected critical integrity failure must prevent the affected workload from continuing.
+
+**Invariant F — Recovery**
+
+A suspended workload may resume only after the applicable recovery authorization and verification requirements are satisfied.
+
+**Invariant G — Membership**
+
+No validator outside the active authorized configuration may contribute a valid vote.
+
+**Invariant H — Resource boundaries**
+
+No workload may exceed its approved resource limits without a new authorization.
+
+## 19.4 Fault-injection tests
+
+The reference simulator should inject:
+
+- Message delay.
+- Message loss.
+- Message duplication.
+- Message reordering.
+- Validator crashes.
+- Byzantine signatures.
+- Conflicting votes.
+- Storage corruption.
+- Resource exhaustion.
+- Oracle disagreement.
+- Clock drift.
+- Restart during commit.
+- Restart during persistence.
+- Recovery interruption.
+
+## 19.5 Acceptance criteria
+
+CBBC v0.3 is eligible for engineering acceptance when:
+
+1. The reference network completes consensus under the declared fault assumptions.
+2. No conflicting committed states appear in the test campaign.
+3. Unauthorized policies cannot become active.
+4. Invalid task bindings cannot execute.
+5. Branches cannot bypass parent-task authorization.
+6. Parallel results are reconciled under explicit rules.
+7. Integrity failures cause the required suspension behavior.
+8. Persistent checkpoints are verifiable.
+9. Recovery requires valid authorization.
+10. Membership changes preserve the applicable consensus safety guarantees.
+11. All mandatory tests pass.
+12. Independent security review identifies no unresolved critical defects.
+
+Passing finite tests does not constitute a mathematical proof of protocol safety.
+
+---
+
+# 20. Reference Software Architecture
+
+## 20.1 Suggested service boundaries
+
+| Service | Responsibility |
+|---|---|
+| Identity Service | Validator and worker authentication |
+| Membership Service | Active validator configuration |
+| Policy Service | Policy approval and versioning |
+| Evidence Service | Provenance and evidence verification |
+| Consensus Service | Proposal, prepare, commit, view changes |
+| Binding Service | Task binding manifests |
+| Bootstrap Service | Environment initialization |
+| Branch Service | BEP branch selection |
+| Worker Scheduler | PPA task assignment |
+| Periodicity Service | PPP scheduling and checkpoints |
+| Deviation Service | PDVP monitoring |
+| Storage Service | PPSA records and replication |
+| Recovery Service | Suspension and restoration |
+| Audit Service | Independent verification and reporting |
+
+## 20.2 Suggested technology categories
+
+Technology choices should be made after the protocol interfaces and security assumptions are finalized.
+
+Potential implementation categories:
+
+- Established BFT consensus implementation.
+- Ed25519-capable cryptographic library.
+- Deterministic serialization library.
+- Append-only database.
+- Content-addressed object storage.
+- Merkle tree implementation.
+- Container or virtual-machine isolation.
+- Distributed task scheduler.
+- Property-based testing framework.
+- Byzantine fault-injection harness.
+- Independent audit and monitoring tools.
+
+A production implementation should not invent a new consensus algorithm when an established, reviewed implementation can satisfy the required model.
+
+---
+
+# 21. Reference Implementation Plan
+
+## Phase 1 — CBBC Consensus Core
+
+Deliverables:
+
+- Seven-validator simulation.
+- Membership registry.
+- Policy authorization.
+- Proposal, prepare, and commit messages.
+- Quorum certificates.
+- View-change implementation.
+- Equivocation detection.
+
+Exit criteria:
+
+- T01–T18 pass.
+- Consensus invariants are documented.
+- Safety assumptions are explicit.
+
+## Phase 2 — Self-Binding and Self-Bootstrapping
+
+Deliverables:
+
+- Binding manifest.
+- Signature verification.
+- Bootstrap configuration.
+- Resource attestation.
+- Isolated worker initialization.
+
+Exit criteria:
+
+- T25–T27 and relevant binding tests pass.
+- No unauthorized workload initialization.
+
+## Phase 3 — BEP and PPA
+
+Deliverables:
+
+- Branch manifest.
+- Primary, parallel, and fallback paths.
+- Worker scheduler.
+- Result reconciliation.
+- Resource limits.
+
+Exit criteria:
+
+- T19–T21 pass.
+- Branches cannot commit independently.
+- Worker results remain traceable to the parent task.
+
+## Phase 4 — PPSA
+
+Deliverables:
+
+- Provenance record format.
+- Content-addressed storage.
+- Merkle checkpoints.
+- Replica verification.
+- Recovery interface.
+
+Exit criteria:
+
+- T11, T18, T23, T24, and T28 pass.
+- Recovery from a verified checkpoint is demonstrated.
+
+## Phase 5 — PPP and PDVP
+
+Deliverables:
+
+- Periodicity controller.
+- EC64.44 application scheduling profile.
+- Monotonic timeout handling.
+- Deviation model configuration.
+- Bounded corrective-action policy.
+
+Exit criteria:
+
+- T22 and T27 pass.
+- Checkpoint behavior remains safe under clock drift and interrupted execution.
+
+## Phase 6 — Integrated Systemic Overlay
+
+Deliverables:
+
+- Virtualized execution environment.
+- Performance-state management.
+- Environment manifests.
+- Snapshot and restoration.
+- Integrated telemetry.
+
+Exit criteria:
+
+- Full end-to-end fault-injection campaign passes.
+- Resource and isolation boundaries are independently reviewed.
+
+---
+
+# 22. Engineering Deliverables
+
+The v0.3 implementation package should ultimately contain:
+
+| Artifact | Description |
+|---|---|
+| CBBC protocol specification | Consensus and authorization rules |
+| Message schema registry | Versioned message definitions |
+| Validator simulator | Seven-validator BFT reference model |
+| Policy schema | Machine-readable behavioral constraints |
+| SBA library | Task binding and signature validation |
+| SBE service | Verified initialization |
+| BEP engine | Branch selection and lifecycle |
+| PPA scheduler | Parallel worker coordination |
+| PPP controller | Periodic synchronization |
+| PPSA storage prototype | Provenance and persistent records |
+| PDVP module | Deviation analysis |
+| Security test suite | Byzantine fault injection |
+| Audit specification | Independent verification procedures |
+| Recovery runbook | Suspension and restoration |
+
+---
+
+# 23. Final Architecture Statement
+
+CBBC v0.3 establishes a proposed architecture for autonomous distributed computing in which execution paths can branch, workloads can operate in parallel, and system activity can synchronize periodically without surrendering behavioral authorization or evidence integrity.
+
+Its four foundational controls are:
+
+**Byzantine Fault Tolerance** — agreement despite a bounded number of faulty or malicious validators.
+
+**Self-Binding** — every authorized operation remains associated with its identity, inputs, policy, resources, and outputs.
+
+**Self-Bootstrapping** — initialization and provisioning occur only through verified configuration and bounded authorization.
+
+**Persistent Integrity** — provenance, execution history, checkpoints, and recovery records remain independently verifiable.
+
+The architecture's execution principle is:
+
+\[
+\text{Authorized Execution}
+=
+\text{Verified Initialization}
+\land
+\text{Valid Binding}
+\land
+\text{Consensus}
+\land
+\text{Policy Compliance}
+\land
+\text{Integrity}
+\]
+
+Its preservation principle is:
+
+\[
+\text{Trustworthiness}
+=
+\text{Evidence}
++
+\text{Verification}
++
+\text{Accountability}
++
+\text{Recoverability}
+\]
+
+**CBBC v0.3 — Branch intelligently. Execute simultaneously. Synchronize periodically. Preserve persistently. Verify independently.**
+
+*End of engineering specification.*
+
+### Recommended first build
+
+The most useful first milestone is a small, reproducible simulation—not a production deployment.
+
+CBBC v0.3 Reference Simulation
+
+Proposed initial build
+
+* 7 validators, tolerating up to 2 Byzantine validators under the selected BFT assumptions.
+
+* 3 execution branches: primary, parallel, fallback.
+
+* 6 parallel workers.
+
+* Signed task-binding manifests.
+
+* One PPSA checkpoint repository.
+
+* Fault injection for equivocation, replay, corrupted storage, and interrupted execution.
+
+* Automated checks for conflicting commits and unauthorized execution.
+
+The next engineering step is to turn this specification into an executable reference model and test harness. 
