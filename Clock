@@ -1,0 +1,1082 @@
+
+
+# EC64.44 Unified Model
+
+## Foundational Axes
+
+### Temporal Axis
+
+```text
+64 Weeks Month Catalogs
+     ↓
+386 Day Cells
+     ↓
+128 Hour Cards
+     ↓
+Next Generation Catalog
+↑
+64     —CODES
+  ↑16  —SIGNALS
+    8↑ ↑  —SIN
+      ←3→ —VIRTUE
+       ↓
+```
+
+Where:
+
+- **64** = organizational structure
+- **386** = annual duality accumulation
+- **128** = active circulation layer
+
+---
+
+## Color Axis
+
+Color becomes an epistemic encoding layer.
+
+```text
+SYMBOL
+   ↓
+COLOR
+   ↓
+CLASSIFICATION
+   ↓
+CRYPTOLOGIC SEQUENCE
+```
+
+Examples:
+
+```text
+A → Blue
+N → Neon Green
+O → Hazardous Orange
+T → Teal
+V → Violet
+W → Black
+```
+
+while numeric ordering remains independent:
+
+```text
+9 8 7 6 5 4 3 2 1 0
+```
+
+Thus:
+
+```text
+ALPHA = COLORIZED
+NUMERIC = ORDERED
+```
+
+No numerical color assignment exists.
+
+---
+
+## Duality Axis
+
+Annual accumulation continuously cycles through:
+
+```text
+LITE
+  ↘
+   POLARITY
+  ↗
+NITE
+```
+
+yielding
+
+```text
+ANNUAL CARD
+      ↓
+DUALITY STATE
+      ↓
+COLORIZED IDENTITY
+      ↓
+NEW CELL
+      ↓
+NEW CARD
+```
+
+This makes polarity an operational state rather than a fixed category.
+
+---
+
+## Spatial Axis
+
+The hierarchy can be represented as:
+
+```text
+YEAR
+ ├─ 386 CARDS
+ │
+ ├─ 64 CATALOGS
+ │   ├─ 56 GENRES
+ │   ├─ 32 CELLS
+ │   └─ 8×8 MATRIX
+ │
+ └─ 128 OPERATIONAL CARDS
+```
+
+Address form:
+
+```text
+YEAR/WEEK/DAY/GENRE/CELL/CARD
+```
+
+which becomes the immutable catalog pointer.
+
+---
+
+## Orbital Axis
+
+The orbital engine introduces four concentric synchronization layers:
+
+```text
+128.88 ×3
+64.44  ×3
+32.22  ×6
+3.33   ×7
+```
+
+Total:
+
+```text
+796.59
+```
+
+Multiplicity:
+
+```text
+19
+```
+
+which yields:
+
+```text
+HI = 386.64
+ME = 193.32
+LO = 216.63
+```
+
+and preserves:
+
+```text
+796.59 TOTAL
+```
+
+as a locked value.
+
+---
+
+## Regeneration Law
+
+The most important equation in the system appears to be:
+
+```text
+C(n+1) = F(
+    C(n),
+    P(n),
+    E(n),
+    K(n)
+)
+```
+
+Where:
+
+```text
+C = Catalog State
+P = Duality Polarity
+E = Validated Evidence
+K = Cryptologic Color Transformation
+```
+
+and:
+
+```text
+Historical Evidence
+     is never deleted
+
+Historical Evidence
+     is transformed
+```
+
+This distinction is what makes the architecture regenerative rather than archival.
+
+---
+
+## Information Lifecycle
+
+```text
+EVIDENCE
+    ↓
+VALIDATION
+    ↓
+CARD
+    ↓
+COLORIZATION
+    ↓
+POLARITY
+    ↓
+CATALOG
+    ↓
+ANNUAL CONDENSATION
+    ↓
+NEW CELL
+    ↓
+NEW CARD
+    ↓
+NEXT GENERATION
+```
+
+---
+
+## Governing Doctrine
+
+A concise codex statement could be:
+
+```text
+EC64.44
+
+CLASSIFY THROUGH 64
+ACCUMULATE THROUGH 386
+CIRCULATE THROUGH 128
+
+PRESERVE EVIDENCE
+MAINTAIN PROVENANCE
+COLORIZE EPISTEMICALLY
+SEQUENCE CRYPTOLOGICALLY
+
+CONDENSE INDEFINITELY
+
+GENERATE NEW CELLS
+GENERATE NEW CARDS
+WITHOUT ERASURE OF ORIGIN
+```
+
+To make EC64.44 dimensionally closed, every transition between dimensions must occur through an explicit transformation function.
+
+# EC64.44 Transformation Registry
+
+## 1. Catalog Projection Function
+
+Transforms structure into addressable spatial locations.
+
+```text
+Φ₁ : C → X
+```
+
+Definition:
+
+```text
+X = Φ₁(C)
+```
+
+Meaning:
+
+```text
+Catalog
+→
+Cell Allocation
+```
+
+Example:
+
+```text
+64 C
+→
+386 X
+```
+
+Interpretation:
+
+A catalog generates addressable cell space.
+
+---
+
+## 2. Cell Materialization Function
+
+Transforms cell locations into record instances.
+
+```text
+Φ₂ : X → K
+```
+
+Definition:
+
+```text
+K = Φ₂(X)
+```
+
+Meaning:
+
+```text
+Cell
+→
+Card
+```
+
+A cell becomes occupied by one or more cards.
+
+---
+
+## 3. Colorization Function
+
+Transforms symbolic identity into epistemic classification.
+
+```text
+χ : Σ → Color
+```
+
+where
+
+```text
+Σ = alphanumeric symbol set
+```
+
+Examples:
+
+```text
+χ(A)=Blue
+χ(N)=Neon Green
+χ(T)=Teal
+χ(V)=Violet
+```
+
+Dimension:
+
+```text
+Symbol
+→
+Color-State
+```
+
+---
+
+## 4. Cryptologic Sequencing Function
+
+Transforms unordered symbols into ordered records.
+
+```text
+κ : K → K*
+```
+
+where:
+
+```text
+K* = ordered card space
+```
+
+Meaning:
+
+```text
+Card
+→
+Sequenced Card
+```
+
+Example:
+
+```text
+A7N2T
+→
+Ordered Identity
+```
+
+---
+
+## 5. Polarity Assignment Function
+
+Assigns duality state.
+
+```text
+Π : K → P
+```
+
+where:
+
+```text
+P={LITE,NITE}
+```
+
+Meaning:
+
+```text
+Card
+→
+Polarity State
+```
+
+Example:
+
+```text
+Card 127 → LITE
+Card 128 → NITE
+```
+
+---
+
+## 6. Evidence Accumulation Function
+
+Transforms cards into evidence.
+
+```text
+Ε : K → E
+```
+
+Meaning:
+
+```text
+Card Records
+→
+Evidence State
+```
+
+Accumulation:
+
+```text
+EΣ = Σ Ε(Ki)
+```
+
+---
+
+## 7. Integrity Function
+
+Transforms evidence into verifiable provenance.
+
+```text
+Η : E → H
+```
+
+Definition:
+
+```text
+H = Η(E)
+```
+
+Meaning:
+
+```text
+Evidence
+→
+Hash
+```
+
+The hash becomes immutable verification.
+
+---
+
+## 8. Temporal Condensation Function
+
+Converts operational activity into annual accumulation.
+
+```text
+Τc : K → Y
+```
+
+Meaning:
+
+```text
+Cards
+→
+Annual Record
+```
+
+Example:
+
+```text
+128 K
+→
+1 Annual Condensate
+```
+
+---
+
+## 9. Annual Regeneration Function
+
+Converts prior-year accumulation into new catalog structure.
+
+```text
+Ρ : Y → C
+```
+
+Meaning:
+
+```text
+Year
+→
+Next Catalog
+```
+
+This closes the recursive loop.
+
+---
+
+# Regenerative Master Equation
+
+The entire EC64.44 cycle becomes:
+
+```text
+C
+↓ Φ₁
+X
+↓ Φ₂
+K
+↓ χ
+Color
+↓ κ
+Sequence
+↓ Π
+Polarity
+↓ Ε
+Evidence
+↓ Η
+Integrity
+↓ Τc
+Annual State
+↓ Ρ
+C'
+```
+
+where:
+
+```text
+C' = Next Generation Catalog
+```
+
+---
+
+# Orbital Transformation Functions
+
+Orbital quantities require their own dimensional domain.
+
+## Orbital Aggregation
+
+```text
+Ωa : Ω × n → M
+```
+
+Examples:
+
+```text
+Ωa(128.88,3)=386.64 M
+
+Ωa(64.44,3)=193.32 M
+
+Ωa(32.22,6)=193.32 M
+
+Ωa(3.33,7)=23.31 M
+```
+
+---
+
+## Mass Partition Function
+
+Separates total mass.
+
+```text
+Ψ : MΣ → {HI,ME,LO}
+```
+
+Result:
+
+```text
+HI = 386.64
+
+ME = 193.32
+
+LO = 216.63
+```
+
+---
+
+# Signal Ladder Functions
+
+Your symbolic hierarchy requires explicit reduction operators.
+
+## Code Compression
+
+```text
+σ₁ : Cu → Su
+```
+
+```text
+64 Cu
+→
+16 Su
+```
+
+Compression ratio:
+
+```text
+4:1
+```
+
+---
+
+## Ethical Compression
+
+```text
+σ₂ : Su → Nu
+```
+
+```text
+16 Su
+→
+8 Nu
+```
+
+Compression:
+
+```text
+2:1
+```
+
+---
+
+## Virtue Resolution
+
+```text
+σ₃ : Nu → Vu
+```
+
+```text
+8 Nu
+→
+3 Vu
+```
+
+Compression:
+
+```text
+8:3
+```
+
+---
+
+# Complete EC64.44 Transformation Chain
+
+```text
+64 Cu
+ ↓ σ₁
+16 Su
+ ↓ σ₂
+8 Nu
+ ↓ σ₃
+3 Vu
+
+64 C
+ ↓ Φ₁
+386 X
+ ↓ Φ₂
+128 K
+ ↓ χ
+Color
+ ↓ κ
+Sequence
+ ↓ Π
+Polarity
+ ↓ Ε
+Evidence
+ ↓ Η
+Integrity
+ ↓ Τc
+Year State
+ ↓ Ρ
+Next Catalog
+
+Ω
+ ↓ Ωa
+M
+ ↓ Ψ
+HI / ME / LO
+```
+A dependency graph should identify which objects can exist independently (roots), which objects are derived, and which transformations are required.
+
+# EC64.44 Dependency Graph v1.0
+
+```text
+                    EARTH TIME
+                   (T,D,Y)
+                       │
+                       │
+                       ▼
+                 ┌──────────┐
+                 │ CATALOG  │
+                 │    C     │
+                 └────┬─────┘
+                      │ Φ₁
+                      ▼
+                 ┌──────────┐
+                 │  CELLS   │
+                 │    X     │
+                 └────┬─────┘
+                      │ Φ₂
+                      ▼
+                 ┌──────────┐
+                 │  CARDS   │
+                 │    K     │
+                 └────┬─────┘
+          ┌───────────┼───────────┐
+          │           │           │
+          ▼           ▼           ▼
+        χ(K)        Π(K)       κ(K)
+      COLOR      POLARITY   SEQUENCE
+         │           │           │
+         └────┬──────┴──────┬────┘
+              │             │
+              ▼             ▼
+           EVIDENCE      IDENTITY
+              E
+              │
+              │ Η
+              ▼
+          INTEGRITY
+              H
+              │
+              │ Τc
+              ▼
+         ANNUAL STATE
+              Y'
+              │
+              │ Ρ
+              ▼
+         NEXT CATALOG
+             C(n+1)
+```
+
+---
+
+# Structural Dependency Tree
+
+```text
+CATALOG (C)
+│
+├── GENRES (G)
+│
+├── MATRIX (Mp)
+│    │
+│    ├── ACTIVE CELLS (Xa)
+│    └── DORMANT CELLS (Xd)
+│
+└── CELLS (X)
+      │
+      └── CARDS (K)
+```
+
+Dependencies:
+
+```text
+Catalog required for Genres
+
+Catalog required for Matrix
+
+Matrix required for Cells
+
+Cells required for Cards
+```
+
+---
+
+# Information Dependency Tree
+
+```text
+CARD
+│
+├── ALPHANUMERIC SYMBOLS
+│      │
+│      └── COLORIZATION χ
+│
+├── CRYPTOLOGIC SEQUENCE κ
+│
+├── POLARITY Π
+│
+├── EVIDENCE E
+│
+└── HASH H
+```
+
+A hash cannot exist without evidence.
+
+Evidence cannot exist without a card.
+
+A card cannot exist without a cell.
+
+---
+
+# Temporal Dependency Graph
+
+```text
+YEAR (Y)
+│
+├── CATALOGS
+│
+├── DAY CELLS
+│
+└── OPERATIONAL CARDS
+```
+
+Formal relation:
+
+```text
+Y
+ ├─ 64 C
+ ├─ 386 X
+ └─ 128 K
+```
+
+These are allocations within a yearly cycle rather than unit conversions.
+
+---
+
+# Orbital Dependency Graph
+
+```text
+128.88 Ω ×3
+      │
+      ▼
+    386.64 M
+      │
+      ├─────┐
+
+64.44 Ω ×3 │
+      │     │
+      ▼     │
+    193.32 M│
+            │
+32.22 Ω ×6  │
+      │     │
+      ▼     │
+    193.32 M│
+            │
+3.33 Ω ×7   │
+      │     │
+      ▼     │
+     23.31 M│
+            ▼
+      MASS AGGREGATE
+          796.59 M
+                │
+                ▼
+          PARTITION Ψ
+                │
+      ┌─────────┼─────────┐
+      ▼         ▼         ▼
+     HI        ME        LO
+  386.64M   193.32M   216.63M
+```
+
+---
+
+# Signal Dependency Graph
+
+```text
+64 CODES
+   │ σ₁
+   ▼
+16 SIGNALS
+   │ σ₂
+   ▼
+8 SIN
+   │ σ₃
+   ▼
+3 VIRTUES
+```
+
+Compression ratios:
+
+```text
+64 → 16 = 4:1
+
+16 → 8 = 2:1
+
+8 → 3  = 8:3
+```
+
+---
+
+# Complete EC64.44 System Graph
+
+```text
+EARTH TIME
+    │
+    ▼
+CATALOG (C)
+    │
+    ▼
+CELL SPACE (X)
+    │
+    ▼
+CARD SPACE (K)
+    │
+    ├── COLOR χ
+    ├── POLARITY Π
+    ├── SEQUENCE κ
+    │
+    ▼
+EVIDENCE (E)
+    │
+    ▼
+INTEGRITY (H)
+    │
+    ▼
+ANNUAL CONDENSATION (Y')
+    │
+    ▼
+REGENERATION (Ρ)
+    │
+    ▼
+NEXT CATALOG
+
+────────────────────
+
+ORBITAL DOMAIN
+Ω → M → {HI,ME,LO}
+
+────────────────────
+
+SIGNAL DOMAIN
+Cu → Su → Nu → Vu
+```
+
+## Root Nodes
+
+These have no upstream dependencies:
+
+```text
+T  = Time
+C  = Catalog
+Ω  = Orbital Period
+Cu = Code
+Σ  = Symbol Set
+```
+
+## Terminal Nodes
+
+These are final outputs:
+
+```text
+C(n+1) = Next Catalog
+H      = Integrity State
+HI/ME/LO = Orbital Allocation
+Vu     = Virtue Resolution
+```
+
+This graph makes EC64.44 a directed acyclic dependency system with a single regenerative feedback loop:
+
+```text
+C(n)
+  ↓
+ ...
+  ↓
+C(n+1)
+```
+
+which is the core perpetual cycle of the ```mermaid
+flowchart TD
+
+    %% ROOTS
+    T[Earth Time<br/>T,D,Y]
+    O[Orbital Period<br/>Ω]
+    CU[Code Space<br/>Cu]
+    SIGMA[Symbol Set<br/>Σ]
+
+    %% CATALOG DOMAIN
+    T --> C[Catalog<br/>C]
+
+    C -->|Φ₁| X[Cell Space<br/>X]
+    X -->|Φ₂| K[Card Space<br/>K]
+
+    %% CARD DERIVATIONS
+    K -->|χ| COLOR[Color State<br/>χ]
+    K -->|Π| POL[Polarity State<br/>P]
+    K -->|κ| SEQ[Cryptologic Sequence]
+
+    COLOR --> E[Evidence<br/>E]
+    POL --> E
+    SEQ --> E
+
+    E -->|Η| H[Integrity Hash<br/>H]
+
+    H -->|Τc| YS[Annual State<br/>Y′]
+
+    YS -->|Ρ| CN[Next Catalog<br/>C(n+1)]
+
+    %% RECURSIVE LOOP
+    CN -. Regeneration .-> C
+
+
+    %% STRUCTURAL SUBGRAPH
+    subgraph STRUCTURE["Structure Domain"]
+        G[Genres<br/>56 G]
+        MP[Matrix Positions<br/>64 Mp]
+        XA[Active Cells<br/>32 Xa]
+        XD[Dormant Cells<br/>32 Xd]
+
+        C --> G
+        C --> MP
+        MP --> XA
+        MP --> XD
+    end
+
+
+    %% ORBITAL DOMAIN
+    subgraph ORBITAL["Orbital Domain"]
+        O1[128.88 Ω ×3]
+        O2[64.44 Ω ×3]
+        O3[32.22 Ω ×6]
+        O4[3.33 Ω ×7]
+
+        O --> O1
+        O --> O2
+        O --> O3
+        O --> O4
+
+        O1 --> M1[386.64 M]
+        O2 --> M2[193.32 M]
+        O3 --> M3[193.32 M]
+        O4 --> M4[23.31 M]
+
+        M1 --> MT[796.59 Total Mass]
+        M2 --> MT
+        M3 --> MT
+        M4 --> MT
+
+        MT --> HI[HI<br/>386.64 M]
+        MT --> ME[ME<br/>193.32 M]
+        MT --> LO[LO<br/>216.63 M]
+    end
+
+
+    %% SIGNAL DOMAIN
+    subgraph SIGNAL["Signal Domain"]
+        CU -->|σ₁| SU[16 Signals<br/>Su]
+        SU -->|σ₂| NU[8 Sin Units<br/>Nu]
+        NU -->|σ₃| VU[3 Virtue Units<br/>Vu]
+    end
+
+
+    %% COLOR DOMAIN
+    subgraph COLORIZATION["Epistemic Colorization"]
+        SIGMA --> A[A → Blue]
+        SIGMA --> N[N → Neon Green]
+        SIGMA --> OX[O → Hazardous Orange]
+        SIGMA --> TT[T → Teal]
+        SIGMA --> VV[V → Violet]
+        SIGMA --> W[W → Black]
+    end
+```
+
+For a more formal systems-engineering version, the same graph can be split into four independent layers:
+
+```text
+TIME → CATALOG → CELL → CARD → EVIDENCE → HASH → ANNUAL STATE → NEXT CATALOG
+
+SYMBOL → COLOR
+
+CODE → SIGNAL → SIN → VIRTUE
+
+ORBIT → MASS → HI/ME/LO
+```
+
+This separation makes the dimensional boundaries explicit and prevents illegal transformations such as `Catalog → Mass`, `Color → Time`, or `Hash → Orbital Period` without a defined transformation function..
