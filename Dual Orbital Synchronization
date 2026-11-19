@@ -1,0 +1,362 @@
+### EC64.44 — PIOAM Operating Sequence & Dual Orbital Synchronization
+
+Formal specification revision: ZYL / SOL / HI–ME / Umbral Mass Accumulator
+
+This revision establishes the transition condition as the central control point of the architecture.
+
+The 128.88 Orb is the complete integrity boundary. The two 64.44 channels independently accumulate temporal progression. The transition is permitted only after their records have been reconciled and the checkpoint has been verified.
+
+### 1\. Complete operating sequence
+
+### 128.88 Orbital cycle
+
+* Initialize 128.88 Orb
+
+    Establish the recognized orbital diameter and initialize the Umbral Mass Accumulator at conceptual Zero Hour (ZH).
+
+* Engage 64.44 Channel A
+
+    Begin independent temporal measurement and record the first orbital progression.
+
+* Reach the 64.44 checkpoint
+
+    Capture the first synchronization boundary and preserve the Channel A record.
+
+* Engage 64.44 Channel B
+
+    Continue accumulation through the second temporal interval.
+
+* Complete 128.88
+
+    Verify the accumulated cycle and reconcile both channel records.
+
+* Authorize transition
+
+    Release the next orbital alignment only after checkpoint verification.
+
+The governing relationship:
+
+T_{\\text{ZYL}}=T_A+T_B=128.88
+
+Under equal-duration operation:
+
+T_A=T_B=64.44
+
+The important distinction is that Channel B does not replace Channel A. Both records remain independently accessible for reconciliation.
+
+### 2\. Complete geometric operating sequence
+
+| Operation               | System responsibility                         |
+| ----------------------- | --------------------------------------------- |
+| ZYL 128.88 boundary     | Recognize orbital diameter                    |
+| Channel traversal       | Follow L, Z, or Y geometry                    |
+| SOL alignment           | Recognize complete traversed shape            |
+| Weight collection       | Accumulate inside/outside contributions       |
+| 50/50 reconciliation    | Establish equal-distribution baseline         |
+| Timekeeping and records | Timestamp activity within recognized diameter |
+| Checkpoint transition   | Authorize next orbital alignment              |
+
+### Synchronized directional movement
+
+The orbital object has two simultaneous attributes:
+
+* Temporal progression: how much time has accumulated.
+
+* Spatial progression: where the orbital object is relative to its channel.
+
+These attributes should be recorded independently and joined through a common checkpoint identifier.
+
+That allows the system to recognize a spatial pivot without losing temporal continuity.
+
+### 3\. Umbral Mass Accumulator — revised allocation
+
+### Conceptual Umbral Mass
+
+### 786.60
+
+16 orbital units across four channel classes
+
+| Orbital class | Count | Weight |
+| ------------- | ----- | ------ |
+| 128.88        | 3     | 386.64 |
+| 64.44         | 3     | 193.32 |
+| 32.22         | 6     | 193.32 |
+| 3.33          | 4     | 13.32  |
+| Total         | 16    | 786.60 |
+
+The accumulation rule is:
+
+M_U=\\sum_{i=1}^{16}w_i=786.60
+
+The two-dimensional accumulator maintains:
+
+Temporal articulation
+
+* Individual hour variables.
+
+* Duration of each operation.
+
+* Channel-specific timestamps.
+
+* Accumulated temporal residuals.
+
+Orbital articulation
+
+* Paired synchronization.
+
+* Directional movement.
+
+* Inside/outside contributions.
+
+* Pivot displacement.
+
+* Accumulated orbital weight.
+
+The 50/50 reconciliation establishes the baseline:
+
+W_{\\text{inside}}=W_{\\text{outside}}
+
+For subsequent 60/40 procurement, the distribution becomes:
+
+W_{\\text{primary}}=0.60WW_{\\text{secondary}}=0.40W
+
+These are allocation relationships, not necessarily physical mass measurements.
+
+### 4\. HI — Dual cyclical synchronization (720°)
+
+### HI Epistemic Clock
+
+### 720°
+
+Two synchronized rotational references
+
+### 360°
+
+Hand A
+
+First rotational reference
+
+### 360°
+
+Hand B
+
+Second rotational reference
+
+360^\\circ+360^\\circ=720^\\circ720° represents the combined rotational reference, not a single 720° physical circle.
+
+### 4.1 Dual parallel hour hands — ZH
+
+Your initial configuration defines two antipodal positions.
+
+| Variable            | Hand A | Hand B |
+| ------------------- | ------ | ------ |
+| Initial position    | 195°   | 15°    |
+| Reference direction | SW     | NE     |
+| Angular separation  | 180°   | 180°   |
+| Initial movement    | Left   | Right  |
+
+The 13° directional adjustment should be treated as a separate movement parameter.
+
+For example:
+
+\\theta_A=195^\\circ+\\delta_A\\theta_B=15^\\circ+\\delta_B
+
+where the signed adjustments determine the actual direction of travel.
+
+The ¼-inch hook is a mechanical alignment parameter. Its measurement should be recorded separately from the 92.5° angular relationship.
+
+### 4.2 Hook synchronization — HI 32.22 / ME 64.44
+
+This defines the relationship between:
+
+* HI 32.22: intermediate orbital reference.
+
+* ME 64.44: primary temporal channel.
+
+* L-channel downward position: directional hook alignment.
+
+* Z-channel: perpendicular spatial traversal.
+
+The 92.5° value is the proposed hook-to-channel alignment angle.
+
+Its verification requires an identified reference axis and pivot origin.
+
+### 5\. ZS — 32.22 Orbital configuration
+
+The ZS configuration introduces the perpendicular Z-channel traversal.
+
+### ZS geometric reference
+
+Short arm
+
+195° SW
+
+Long arm
+
+260° W
+
+Reference relationship
+
+HI 32.22 → perpendicular Z-channel → ME 64.44
+
+Operating condition
+
+Cyclic concurrency along the track, with rotational position measured against the 64.44 reference.
+
+The ZS record should contain:
+
+ZS=(\\theta_{\\text{HI}},\\theta_{\\text{ME}},P_Z,\\omega,\\Delta\\phi)
+
+Where:
+
+* = HI orbital position.
+
+* = ME orbital position.
+
+* = Z-channel spatial configuration.
+
+* = rotational velocity.
+
+* = phase difference.
+
+### 4.3 Four-second rotational notation
+
+Your notation:
+
+`4 sec every 1 sec in 360° motion`
+
+needs a distinction between the rotation period and the update interval.
+
+For a four-second complete rotation:
+
+f=\\frac{1}{4}=0.25\\text{ Hz}\\omega=\\frac{360^\\circ}{4s}=90^\\circ/s
+
+If the system updates every second, the expected angular progression is:
+
+| Elapsed time | Angular position |
+| ------------ | ---------------- |
+| 0 seconds    | 0°               |
+| 1 second     | 90°              |
+| 2 seconds    | 180°             |
+| 3 seconds    | 270°             |
+| 4 seconds    | 360°             |
+
+This provides a mathematically consistent interpretation of four seconds per complete rotation with one-second synchronization updates.
+
+It remains a proposed operating interpretation until the mechanical timing is confirmed.
+
+### 6\. Intermediate synchronization and transition intelligence
+
+The transition engine should use six verification conditions.
+
+| Condition     | Verification                            |
+| ------------- | --------------------------------------- |
+| Temporal      | Both channel durations recorded         |
+| Geometric     | Orbital boundary recognized             |
+| Directional   | Movement direction established          |
+| Weight        | Inside/outside contributions reconciled |
+| Cryptographic | Records authenticated                   |
+| Convergence   | Phase error within tolerance            |
+
+The transition authorization rule:
+
+\\boxed{
+\\text{TRANSITION}=
+T\\land G\\land D\\land W\\land C\\land P
+}
+
+Where each variable represents a successfully verified condition.
+
+If any condition fails, the system remains at the current checkpoint rather than advancing prematurely.
+
+### Transition state machine
+
+```python
+
+from enum import Enum, auto
+
+class State(Enum):
+    INITIALIZE = auto()
+    CHANNEL_A = auto()
+    CHECKPOINT_A = auto()
+    CHANNEL_B = auto()
+    RECONCILE = auto()
+    VERIFIED = auto()
+    TRANSITION = auto()
+    HOLD = auto()
+
+def authorize_transition(checks):
+    required = (
+        "temporal",
+        "geometric",
+        "directional",
+        "weight",
+        "cryptographic",
+        "convergence",
+    )
+
+    if all(checks.get(key, False) for key in required):
+        return State.TRANSITION
+
+    return State.HOLD
+```
+
+### 7\. Annual synchronization and drift preservation
+
+The annual boundary introduces an external Earth-calendar reference.
+
+The system must preserve three separate values:
+
+* Original EC64.44 accumulated time.
+
+* Independently measured Earth elapsed time.
+
+* Calculated temporal difference.
+
+D_{\\text{annual}}=
+T_{\\text{EC accumulated}}-
+T_{\\text{Earth elapsed}}
+
+A correction is a new recorded event, not a replacement of the original measurement.
+
+This produces a traceable history of synchronization, divergence, and recalibration.
+
+### 8\. Consolidated architecture
+
+### EC64.44 — Complete conceptual hierarchy
+
+HI — Epistemic Clock
+
+### 720°
+
+Dual cyclical synchronization • Oscillation • Convergence
+
+ME — Temporal and Spatial Engine
+
+### 64.44
+
+Parallel timekeepers • L/Z/Y traversal • Weight accumulation
+
+LO — Integrity and Audit
+
+### 128.88
+
+ZYL boundary • SOL recognition • Checkpoint verification • Cryptographic records
+
+Transition intelligence
+
+Next orbital alignment
+
+Verified temporal, geometric and cryptographic convergence
+
+### 9\. Governing definition
+
+Pivot-Independent Orbital Alignment Model (PIOAM)
+
+A dual-timekeeper architecture in which two independently accumulating orbital systems maintain synchronized temporal and spatial references through periodic checkpoints, directional movement, weight reconciliation, and cryptographic verification. A third transition-intelligence process evaluates the resulting records and determines when the next orbital alignment is permitted.
+
+Its governing principle:
+
+> Two timekeepers establish comparative recognition. One transition intelligence establishes availability. Orbital convergence establishes continuity. Evidence establishes integrity.
+
+Recommended next development: formalize the HI 720° dual-hand mechanism as a mechanical and software simulation, preserving the 195°/15° initial positions, 92.5° hook alignment, 32.22-to-64.44 perpendicular relationship, and four-second rotational cycle as independently configurable parameters.
