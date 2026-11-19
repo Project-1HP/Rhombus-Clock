@@ -1,0 +1,95 @@
+Crypto Synchronous
+Reference implementation created and tested
+
+I've built BIA–QVE–QCP v0.1 as a Python project with JSON Schema validation, cryptographic signatures, a seven-validator simulator, and automated acceptance tests.
+
+### Crypto Synchronous v0.1
+
+Python reference implementation · ZIP package
+
+Automated tests
+
+### 14 / 14
+
+### 7
+
+Simulated validators
+
+### 5
+
+Required quorum
+
+### 2
+
+Byzantine fault tolerance assumption
+
+### 3
+
+Core verification services
+
+### Download the implementation
+
+BIA–QVE–QCP v0.1 Reference Implementation
+
+Python source · schemas · tests · simulator · README
+
+Download complete project ZIP
+
+### What's implemented
+
+| Component       | Implemented functionality                                            |
+| --------------- | -------------------------------------------------------------------- |
+| BIA             | Bootstrap manifest, payload hashing, configuration and policy checks |
+| QVE             | Evidence qualification, QEM dimensions, verification decisions       |
+| QCP             | Numerical calibration, tolerance, deviation checks                   |
+| CBBC simulator  | Ed25519 signatures and 5-of-7 quorum validation                      |
+| PPSA            | Append-only audit journal and hash-chain verification                |
+| JSON Schema     | Draft 2020-12 validation                                             |
+| Automated tests | Integrity, calibration, evidence, quorum, and tampering tests        |
+
+### Run it
+
+After extracting the ZIP:
+
+```bash
+python -m venv .venv
+pip install -e ".[test]"
+pytest -q
+cryptosync-demo
+```
+
+The demonstration produced:
+
+```json
+{
+  "bootstrap": "VERIFIED",
+  "qve": "VERIFIED",
+  "qcp": "PASS",
+  "validators": 7,
+  "fault_tolerance": 2,
+  "quorum_required": 5,
+  "quorum_certificate_valid": true,
+  "ppsa_records": 4,
+  "ppsa_chain_valid": true
+}
+```
+
+### Important engineering boundary
+
+This is a functioning reference prototype, not production-ready Byzantine consensus. The seven-validator component demonstrates signed quorum certificates, not a complete PBFT implementation with view changes, replicated state-machine safety, and membership reconfiguration.
+
+The next development milestone should be v0.2: Distributed Consensus and Persistent Replication, extending the prototype with:
+
+* Actual validator-to-validator communication.
+
+* PBFT prepare and commit phases.
+
+* Leader replacement and view changes.
+
+* Replicated PPSA storage.
+
+* Byzantine fault injection.
+
+* Recovery and checkpoint certificates.
+
+That will move the architecture from a local verification simulator toward a distributed implementation.
