@@ -1,0 +1,275 @@
+### Peridial Minting — Credential and Account Integrity, Card Conduit Generator & Blockchain
+
+This extends CBBC v0.4 — Crypto Synchronous Bounded Autonomy into a credential issuance and documentary-preservation subsystem.
+
+The central concept is a controlled process that transforms an authorized account credential into a verifiable digital identity record, generates a corresponding Card Conduit, and anchors its issuance and lifecycle history to a blockchain-backed integrity ledger.
+
+Core principle: A credential may be minted, renewed, transferred under authorization, suspended, or revoked—but its provenance and audit history must remain verifiable.
+
+### 1\. System definition
+
+Peridial Minting is a proposed cryptographic credential lifecycle architecture connecting five functions:
+
+* Credential Integrity — establish the authenticity and status of a credential.
+
+* Account Integrity — bind the credential to an authorized account without exposing unnecessary personal information.
+
+* Card Conduit Generator (CCG) — create a structured, machine-readable and human-readable credential conduit.
+
+* Blockchain Anchoring — preserve verifiable issuance, authorization, and lifecycle events.
+
+* Peridial Synchronization — associate credential recognition with an independently verifiable clock profile and synchronization record.
+
+### Peridial Minting architecture
+
+HI — Credential Governance
+
+Identity requirements · Account authorization · Issuance policy
+
+ME — Credential Construction
+
+Peridial Minting · Card Conduit Generator · Cryptographic binding
+
+LO — Integrity Preservation
+
+Blockchain anchor · PPSA repository · Audit and revocation history
+
+RECOGNITION CYCLE
+
+VerifyRecognizeAudit
+
+### 2\. Card Conduit Generator (CCG)
+
+The Card Conduit Generator is the bridge between documentary records and a reusable credential.
+
+It should support two connected representations:
+
+![Certilia Web](https://images.openai.com/static-rsc-4/qTD_eImYJ-dvX6bXS8srH1d4l_GGEBl37aga5kSA6PLyuvHPJ2d9SoPLfx3jevw0RnVJj4rZRWgSwrhAVOSX9b6On67J8YYB-8cCrfgsOWERk5kGiheSgHM5RuwBVS9vI5nR8d4NzPYpVrGAAI9nUEOcZSaP8-z9684kiKjv5D-BSFDZdOP7Q4uLOOUEGfQ9?purpose=fullsize)
+
+Credential Card
+
+A human-readable identity and authorization presentation.
+
+![Bertelsmann hat gefälschte „Hitler-Tagebücher“ an das Bundesarchiv übergeben - Bundesarchiv](https://images.openai.com/static-rsc-4/ozsBwZi1zN0SQQ9V8TYUT4qELozXejvRj3bJmE2rJbGOVSWozpR138hH86qdKM4qpcsZr0rqTgsPMrWJRHRLsUmoyRxWcqZNqcLakfRECifVamPKTumf3GrQuSjL_HlhEbjSkmlrHvfBiwqSGee3-0IZBstjFP7HTew6TxZH_uWJaW26EGHkXBdhJ9rrMT4y?purpose=fullsize)
+
+Document Conduit
+
+A structured record linking digitized documents, metadata, provenance, and verification.
+
+This builds on the Card Conduit concept of digitized paper records, credential layers, defined fields, OCR, classification, validation, exception handling, and human approval.
+
+### Generator inputs
+
+| Input                | Function                                                   |
+| -------------------- | ---------------------------------------------------------- |
+| Account reference    | Identifies the authorized account                          |
+| Credential class     | Defines the credential's purpose                           |
+| Issuer identity      | Establishes who issued it                                  |
+| Public-key reference | Enables cryptographic verification                         |
+| Document references  | Links supporting records                                   |
+| Policy hash          | Identifies the governing issuance rules                    |
+| Clock profile        | Associates the credential with its synchronization profile |
+| Partition reference  | Locates its protected record partition                     |
+| Lifecycle status     | Indicates current validity                                 |
+
+### Card Conduit output
+
+The generator produces:
+
+* A credential card identifier.
+
+* A signed credential manifest.
+
+* A document provenance index.
+
+* A QR code or other verification reference.
+
+* A machine-readable credential representation.
+
+* A human-readable card representation.
+
+* A blockchain anchoring reference.
+
+The card is a presentation and access conduit—not proof of identity by itself. The verifier must check its signature, issuer authorization, expiration, revocation status, and relevant policy.
+
+### 3\. Credential lifecycle
+
+### Peridial Minting sequence
+
+* Account submission
+
+    An account holder submits a credential request and supporting evidence.
+
+* Identity and authorization validation
+
+    Verify issuer authority, account control, and required evidence.
+
+* Cryptographic binding
+
+    Associate the credential with a public-key reference, account reference, and policy hash.
+
+* Card Conduit generation
+
+    Construct the credential manifest and card representation.
+
+* Mint authorization
+
+    Require governance approval and the applicable CBBC validator quorum.
+
+* Blockchain anchoring
+
+    Record a signed issuance event or its cryptographic commitment.
+
+* PPSA preservation
+
+    Preserve the credential, supporting evidence, signatures, and lifecycle history.
+
+* Recognition and verification
+
+    Allow an authorized verifier to check the credential's validity without accessing unnecessary personal information.
+
+### 4\. Credential data structure
+
+A proposed credential manifest:
+
+```json
+{
+  "protocol": "PERIDIAL-MINT",
+  "version": "0.1",
+  "credential_id": "CRED-UNIQUE-ID",
+  "account_reference": "PAIRWISE-ACCOUNT-REF",
+  "credential_class": "ACCOUNT_INTEGRITY",
+  "issuer_reference": "AUTHORIZED-ISSUER",
+  "public_key_reference": "KEY-REFERENCE",
+  "clock_profile": {
+    "system": "EC64.44",
+    "epoch_reference": "CLOCK-EPOCH",
+    "synchronization_status": "VERIFIED"
+  },
+  "card_conduit": {
+    "generator_version": "CCG-0.1",
+    "document_partition": "PPAx-REFERENCE",
+    "provenance_reference": "PPL-REFERENCE"
+  },
+  "policy_hash": "SHA256-POLICY-DIGEST",
+  "credential_hash": "SHA256-CREDENTIAL-DIGEST",
+  "blockchain_anchor": "TRANSACTION-REFERENCE",
+  "status": "PENDING_ISSUANCE"
+}
+```
+
+This is an illustrative schema, not an issued credential. Personal information and original documents should remain in protected storage; the blockchain should ordinarily contain only minimal commitments, identifiers, and signed lifecycle events.
+
+### 5\. Blockchain integrity layer
+
+The blockchain component should provide an independently verifiable sequence of credential lifecycle events.
+
+| Event                | Purpose                          |
+| -------------------- | -------------------------------- |
+| CREDENTIAL_REQUESTED | Request initiated                |
+| ACCOUNT_VERIFIED     | Account requirements satisfied   |
+| CREDENTIAL_MINTED    | Issuance authorized              |
+| CARD_CONDUIT_CREATED | Card representation generated    |
+| CREDENTIAL_RENEWED   | Validity extended                |
+| CREDENTIAL_SUSPENDED | Recognition temporarily disabled |
+| CREDENTIAL_REVOKED   | Credential invalidated           |
+| CREDENTIAL_RECOVERED | Authorized recovery completed    |
+
+Important architectural distinction: the blockchain should anchor integrity evidence, not become a public repository of personal records.
+
+Recommended arrangement:
+
+* On-chain: credential commitment, issuer reference, event type, sequence, policy version, signed event hash.
+
+* Off-chain: encrypted credential documents, identity evidence, card data, detailed audit records.
+
+* PPSA: replicated preservation, provenance, recovery, and integrity verification.
+
+* CBBC: authorization of issuance, renewal, suspension, and recovery.
+
+A hash commitment can demonstrate that a presented record matches a previously anchored record. It cannot independently prove that the original information was true.
+
+### 6\. Account integrity and recovery controls
+
+Required security boundaries
+
+Key separation — account authentication keys must be distinct from issuer signing keys.
+
+Phishing-resistant authentication — use hardware-backed or passkey-based authentication where supported.
+
+Dual authorization — governance approval plus validator quorum for credential issuance and recovery.
+
+Least privilege — a verifier sees only the claims required for its task.
+
+Immutable audit history — revocation does not erase prior issuance or verification events.
+
+Bounded autonomy — suspicious activity suspends the affected credential operation instead of granting automatic additional authority.
+
+Account recovery must be a separately authorized process. Losing a key must not automatically allow a replacement credential to inherit the old credential's authority.
+
+### 7\. Integration with CBBC v0.4
+
+| Existing subsystem | Peridial responsibility                                       |
+| ------------------ | ------------------------------------------------------------- |
+| BIA                | Verify initial credential configuration and payload integrity |
+| SBA                | Bind credential to its authorized operation                   |
+| SBE                | Establish a verified credential-generation environment        |
+| QVE / QEM          | Evaluate credential evidence and completeness                 |
+| QCP                | Validate clock and measurement parameters                     |
+| CBBC               | Approve issuance and lifecycle transitions                    |
+| BEP                | Select authorized generation or recovery paths                |
+| PPA                | Parallelize document processing and verification              |
+| PPSA               | Preserve records, provenance, and lifecycle history           |
+| PPP                | Coordinate periodic validity and integrity checks             |
+| PPAx               | Organize protected account and credential partitions          |
+| UCF                | Present a user-facing verification conclusion                 |
+
+### The resulting architecture
+
+### Peridial Minting — three-layer integrity model
+
+HI — Authority and Recognition
+
+Account integrity · Credential authorization · Issuer governance · Evidence qualification
+
+ME — Generation and Synchronization
+
+Card Conduit Generator · Peridial Minting · Cryptographic binding · Clock profile · Credential recognition
+
+LO — Blockchain and Preservation
+
+Blockchain anchors · PPSA · Document provenance · Revocation history · Recovery checkpoints
+
+All three layers operate under CBBC authorization and bounded autonomy.
+
+### 8\. Initial acceptance criteria
+
+The first implementation should demonstrate that:
+
+* An unauthorized issuer cannot mint a valid credential.
+
+* A credential cannot be bound to an account without authorization.
+
+* Any modification to a signed credential is detected.
+
+* A generated Card Conduit resolves to its correct provenance record.
+
+* Blockchain anchors match the corresponding off-chain records.
+
+* Revoked credentials fail subsequent validity checks.
+
+* Recovery requires a separate authorization certificate.
+
+* A credential's historical audit trail survives suspension and revocation.
+
+* Clock synchronization failure does not silently invalidate or rewrite historical issuance timestamps.
+
+* A verifier can confirm required claims without receiving the entire private account record.
+
+Recommended first deliverable: Peridial Minting Technical Specification v0.1, covering the Card Conduit Generator, credential manifest, account-binding protocol, blockchain event schema, and CBBC validator interactions.
+
+The defining doctrine:
+
+> Recognize through credentials. Bind through cryptography. Generate through verified conduits. Anchor through consensus. Preserve through provenance.
+
+A useful next step would be to establish a testable Card Conduit Generator specification and its credential-card field layout.
